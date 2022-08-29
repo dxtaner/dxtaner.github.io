@@ -9,10 +9,10 @@ body {
 #background_Body {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center;
   background: url(../background.gif);
   background-size: cover;
-  background-color:#d38484;
+  background-color:#f2efef;
 }
 
 h1 {
