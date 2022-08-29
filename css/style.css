@@ -3,16 +3,16 @@ body {
   color: white;
   text-align: center;
   font-family: "Merriweather", serif;
-  background-color: black;
+  /* background-color: black; */
 }
 
 #background_Body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background: url(background.gif);
-    background-size: cover;
-    background-color:#464646;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background: url(../background.gif);
+  background-size: cover;
+  background-color:#d38484;
 }
 
 h1 {
@@ -66,7 +66,7 @@ a:hover {
 }
 
 .top-container {
-  background-color: black;
+  background-color: revert;
   position: relative;
   padding: 3%;
 }
