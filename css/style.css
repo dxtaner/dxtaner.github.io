@@ -3,7 +3,7 @@ body {
   color: white;
   text-align: center;
   font-family: "Merriweather", serif;
-  /* background-color: black; */
+  /* background-color: lavender; */
 }
 
 #background_Body {
@@ -12,7 +12,7 @@ body {
   background-position: center;
   background: url(../background.gif);
   background-size: cover;
-  background-color:#f2efef;
+  background-color: #f2efef;
 }
 
 h1 {
@@ -37,14 +37,15 @@ hr {
 }
 
 a {
-  color: #590b87;
+  /* color: #eaf6f6; */
+  color: darkorchid;
   font-family: "Montserrat", sans-serif;
   margin: 10px 10px;
   text-decoration: none;
 }
 
 a:hover {
-  color: #eaf6f6;
+  color: #590b87;
 }
 
 .copyright {

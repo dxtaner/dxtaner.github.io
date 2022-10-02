@@ -36,8 +36,7 @@
 
   <body id="background_Body">
     <div class="top-container">
-      <h1><em>I'm Taner</em></h1>
-
+      <h1 onclick="myFunction()"><em>I'm Taner</em></h1>
       <div class="product">
         <div class="effect-1"></div>
         <div class="effect-2"></div>
@@ -114,6 +113,28 @@
         <a class="footer-link" href="https://github.com/dxtaner/">Github</a>
         <a href="index.html"><p class="copyright">© Taner Özer 2022</p></a>
       </div>
+
+      <script>
+        // window.onclick = myFunction;
+        var clickCount=0;
+        function myFunction() {
+          clickCount++;
+          if(clickCount%2!=0){
+            document.getElementsByTagName("div")[0].style.backgroundColor = "snow"; 
+            document.getElementsByClassName("profile")[0].style.color="black";
+            document.getElementsByClassName("skill-row")[0].style.color="black";
+            document.getElementsByClassName("skill-row")[1].style.color="black";
+          }
+          else{
+            document.getElementsByTagName("div")[0].style.backgroundColor = "black"; 
+            document.getElementsByClassName("profile")[0].style.color="white";
+            document.getElementsByClassName("skill-row")[0].style.color="white";
+            document.getElementsByClassName("skill-row")[1].style.color="white";
+          }
+        }
+
+      </script>
+
 
       <!-- Loads <model-viewer> for modern browsers: -->
       <script
