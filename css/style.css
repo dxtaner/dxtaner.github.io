@@ -1,3 +1,18 @@
+
+/* Gece teması */
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+a {
+  color: #ddd;
+}
+
+.switch input:checked + .slider {
+  background-color: #222;
+}
+
 body {
   margin: 0;
   color: white;

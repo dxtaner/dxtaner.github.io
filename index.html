@@ -16,14 +16,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous">
+  <style>
+    /* Gündüz modu stilleri */
+    body {
+      background-color: #fff;
+      color: wheat;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    /* Gece modu stilleri */
+    body.dark-mode {
+      background-color: #000;
+      color: rebeccapurple;
+    }
+
+    body.dark-mode h1 {
+      font-size: 36px;
+    }
+
+    .dark-mode-button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 24px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .dark-mode-button i {
+      margin-right: 8px;
+    }
+    
+  </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
 </head>
 
 <body id="background_Body">
+  <br>
+  <button class="dark-mode-button" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
   <div class="top-container">
-    <h1 onclick="myFunction()"><em>I'm Taner</em></h1>
+    <h1><em>I'm Taner</em></h1>
     <div class="product">
       <div class="effect-1"></div>
       <div class="effect-2"></div>
@@ -37,14 +77,15 @@
             <strong>Who am I? What do I do?</strong>
           </h2>
         </a>
-        <p>I'm a zealous computer engineer from Bursa, Turkey, and I have a passion for software and computer technologies</p>
+        <p>I'm a zealous computer engineer from Bursa, Turkey, and I have a passion for software and computer
+          technologies</p>
         <p>
           Currently, I am focusing on back-end web development with
           <em>Node.js, Graphql, React.js </em> and other related technologies.
         </p>
         <p>
           If you have a project that requires the skills and expertise I offer, I would be happy to hear from you.
-          I'm eager to learn and share my knowledge with others, and I believe that collaboration is the key to 
+          I'm eager to learn and share my knowledge with others, and I believe that collaboration is the key to
           achieving great results.
         </p>
         <p> As a natural and curious person, I enjoy creating things and finding creative solutions to complex problems.
@@ -56,7 +97,8 @@
         <div class="skill-row">
           <p class="red">
             <u><strong>I know how to:</strong></u>
-          <p class="red">I have a wide range of skills and interests that span across multiple programming languages, technologies, and tools:
+          <p class="red">I have a wide range of skills and interests that span across multiple programming languages,
+            technologies, and tools:
           </p>
           </p>⚡ I am interested in: Pyhton, Java, C, C#, (Php, HTML, CSS,
           JavaScript, Bootstrap) ⚡ <br>
@@ -99,24 +141,10 @@
     </div>
 
     <script>
-      // window.onclick = myFunction;
-      var clickCount = 0;
-      function myFunction() {
-        clickCount++;
-        if (clickCount % 2 != 0) {
-          document.getElementsByTagName("div")[0].style.backgroundColor = "snow";
-          document.getElementsByClassName("profile")[0].style.color = "black";
-          document.getElementsByClassName("skill-row")[0].style.color = "black";
-          document.getElementsByClassName("skill-row")[1].style.color = "black";
-        }
-        else {
-          document.getElementsByTagName("div")[0].style.backgroundColor = "black";
-          document.getElementsByClassName("profile")[0].style.color = "white";
-          document.getElementsByClassName("skill-row")[0].style.color = "white";
-          document.getElementsByClassName("skill-row")[1].style.color = "white";
-        }
+      function toggleDarkMode() {
+        const body = document.querySelector('body');
+        body.classList.toggle('dark-mode');
       }
-
     </script>
 
 
