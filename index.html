@@ -60,8 +60,17 @@
 </head>
 
 <body id="background_Body">
+
+ 
   <br>
-  <button class="dark-mode-button" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
+  <nav>
+    <a href="#profile">Who Am I </a>
+    <a href="#skills">Skills </a>
+    <a href="#projects">Projects </a>
+    <a href="#links">My links </a>
+    <a class="dark-mode-button" style="background-color:gainsboro;" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></a>
+  </nav>
+  
   <div class="top-container">
     <h1><em>I'm Taner</em></h1>
     <div class="product">
@@ -71,7 +80,7 @@
     </div>
 
     <div class="middle-container">
-      <div class="profile">
+      <div class="profile" id="profile">
         <a href="#">
           <h2 class="first-header">
             <strong>Who am I? What do I do?</strong>
@@ -92,7 +101,7 @@
         </p>
       </div>
 
-      <div class="skills">
+      <div class="skills" id="skills">
         <h2>My Skills & Interests</h2>
         <div class="skill-row">
           <!-- <p class="red">
@@ -113,6 +122,10 @@
           ⚡
           </p> -->
         </div>
+        <div class="project" id="projects">
+          <h2>My Projects</h2>
+
+        </div>
         <div class="skill-row">
           <h2>Interests & Hobbies</h2>
           <p>🪐Researching New Technologies🪐</p>
@@ -130,7 +143,7 @@
       </div>
     </div>
 
-    <div class="bottom-container">
+    <div class="bottom-container" id="links">
       <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/">LinkedIn</a>
       <a class="footer-link" href="https://www.hackerrank.com/tanerozer">HackerRank</a>
       <a class="footer-link" href="https://medium.com/@dxtaner">Medium</a>
