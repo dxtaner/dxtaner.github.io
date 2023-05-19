@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Taner's Personal WebSite</title>
+  <title>Taner's Personal Website</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,7 +52,6 @@
     .dark-mode-button i {
       margin-right: 8px;
     }
-    
   </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
@@ -61,16 +60,18 @@
 
 <body id="background_Body">
 
- 
   <br>
   <nav>
-    <a href="#profile">Who Am I </a>
-    <a href="#skills">Skills </a>
-    <a href="#projects">Projects </a>
-    <a href="#links">My links </a>
-    <a class="dark-mode-button" style="background-color:gainsboro;" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></a>
+    <a href="#profile">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#links">My Links</a>
+    <a class="dark-mode-button" style="background-color:gainsboro;" onclick="toggleDarkMode()">
+      <i class="fas fa-moon"></i>
+      Dark Mode
+    </a>
   </nav>
-  
+
   <div class="top-container">
     <h1><em>I'm Taner</em></h1>
     <div class="product">
@@ -81,127 +82,102 @@
 
     <div class="middle-container">
       <div class="profile" id="profile">
-        <a href="#">
-          <h2 class="first-header">
-            <strong>Who am I? What do I do?</strong>
-          </h2>
-        </a>
-        <p>I'm a zealous computer engineer from Bursa, Turkey, and I have a passion for software and computer
-          technologies</p>
-        <p>
-          Currently, I am focusing on back-end web development with
-          <em>Node.js, Graphql, React.js </em> and other related technologies.
-        </p>
-        <p>
-          If you have a project that requires the skills and expertise I offer, I would be happy to hear from you.
-          I'm eager to learn and share my knowledge with others, and I believe that collaboration is the key to
-          achieving great results.
-        </p>
-        <p> As a natural and curious person, I enjoy creating things and finding creative solutions to complex problems.
-        </p>
+        <h2 class="first-header">
+          <strong>Who am I? What do I do?</strong>
+        </h2>
+        <p>I'm a passionate computer engineer from Bursa, Turkey, with a strong interest in software and computer
+          technologies.</p>
+        <p>Currently, my focus is on back-end web development using technologies such as <em>Node.js, GraphQL,
+            React.js</em>, and other related tools.</p>
+        <p>If you have a project that requires my skills and expertise, I would be delighted to hear from you. I am
+          always eager to learn and share my knowledge with others, as I believe that collaboration is the key to
+          achieving great results.</p>
+        <p>As a naturally curious person, I enjoy the process of creating things and finding innovative solutions to
+          complex problems.</p>
       </div>
 
-      <div class="skills" id="skills">
+      <!-- <div class="skills" id="skills">
         <h2>My Skills & Interests</h2>
         <div class="skill-row">
-          <!-- <p class="red">
+          <p class="red">
             <u><strong>I know how to:</strong></u>
-          <p class="red">I have a wide range of skills and interests that span across multiple programming languages,
-            technologies, and tools:
           </p>
-          </p>⚡ I am interested in: Pyhton, Java, C, C#, (Php, HTML, CSS,
-          JavaScript, Bootstrap) ⚡ <br>
-          ⚡ Technologies: React, Node.js, .Net Core, Java Spring Framework, Graphql,
-          Git, OpenCv, Numpy, Pandas, Arduino, Firebase⚡<br>
-          ⚡
-          Database: SQL, PL/SQL, Sqlite, MongoDb, Postegresql, Mysql
-          ⚡
-          <br>
-          ⚡
-          Agile & Scrum, Github, Trello
-          ⚡
-          </p> -->
+          <p class="red">I have a wide range of skills and interests that span across multiple programming languages,
+            technologies, and tools:</p>
+          <p class="red">⚡ I am interested in: Python, Java, C, C#, (Php, HTML, CSS, JavaScript, Bootstrap) ⚡</p>
+          <p class="red">⚡ Technologies: React, Node.js, .Net Core, Java Spring Framework, Graphql, Git, OpenCv, Numpy,
+            Pandas, Arduino, Firebase ⚡</p>
+          <p class="red">⚡ Database: SQL, PL/SQL, Sqlite, MongoDb, Postegresql, Mysql ⚡</p>
+          <p class="red">⚡ Agile & Scrum, Github, Trello ⚡</p>
         </div>
-        <pBackend class="project" id="projects">
+        <div class="project" id="projects">
           <h2>My Projects</h2>
           <h3>2023 Football Management System</h3>
-          <p>Technologies: Node.js, Express.js, Mongodb-mongoose, dotenv.
-          </p> 
-          <p>Backend code for a football management system with
-            Coach,Footballer, Stadium,and Team models.
-          </p>
-          <a href="https://github.com/dxtaner/footballapp"> Here </a>
+          <p>Technologies: Node.js, Express.js, Mongodb-mongoose, dotenv.</p>
+          <p>Backend code for a football management system with Coach, Footballer, Stadium, and Team models.</p>
+          <a href="https://github.com/dxtaner/footballapp">Here</a>
 
-          <h3>2023 Movie Store WepApi</h3>
-          <p>Technologies: C#, AspNetCore, EntityFrameworkCore,
-            EntityFrameworkCore-InMemory, AutoMapper, FluentValidation,
-            JwtBearerToken            
-          </p> 
-          <p>Features: Developed to manage the database of a movie store.
-            Written in C# programming language and uses .NET Framework 6.0.
-            InMemory used for database management.
-          </p>
-          <a href="https://github.com/dxtaner/MovieStore"> Here </a>
+          <h3>2023 Movie Store WebApi</h3>
+          <p>Technologies: C#, AspNetCore, EntityFrameworkCore, EntityFrameworkCore-InMemory, AutoMapper,
+            FluentValidation, JwtBearerToken</p>
+          <p>Features: Developed to manage the database of a movie store. Written in C# programming language and uses
+            .NET Framework 6.0. InMemory used for database management.</p>
+          <a href="https://github.com/dxtaner/MovieStore">Here</a>
 
           <h3>2021 Face Image Classification</h3>
-          <p>Technologies: python, numpy, opencv, keras, cnn, utk-face-dataset.
-          </p> 
-          <p>Features: Age, gender, and race classification with convolutional
-            neural networks.
-          </p>
+          <p>Technologies: Python, NumPy, OpenCV, Keras, CNN, utk-face-dataset.</p>
+          <p>Features: Age, gender, and race classification with convolutional neural networks.</p>
+          <a href="https://github.com/dxtaner/FaceImageClaassification">Here</a>
 
-          <a href="https://github.com/dxtaner/FaceImageClaassification"> Here </a>
           <h3>2020 Face Recognition</h3>
-          <p>Technologies: opencv, haarcascade, keras, numpy, cvlib, pandas,
-          sqlite3, face-image-data.
-          </p> 
-          <p>Features: OpenCV to perform facerecognition. To build our face
-          recognition system.
-          </p>
+          <p>Technologies: OpenCV, Haarcascade, Keras, NumPy, cvlib, Pandas, SQLite3, face-image-data.</p>
+          <p>Features: OpenCV to perform face recognition. To build our face recognition system.</p>
+          <a href="https://github.com/dxtaner/face_recognition_Opencv_and_Cnn_network">Here</a>
+        </div>
 
-          <a href="https://github.com/dxtaner/face_recognition_Opencv_and_Cnn_network"> Here </a>
-        </div>
-        <div class="skill-row">
-          <h2>Interests & Hobbies</h2>
-          <p>🪐Researching New Technologies🪐</p>
-          <p>🪐Reading movie reviews🪐</p>
-          <p>🪐Artificial Intelligence🪐</p>
-        </div>
-      </div>
-      <hr />
-      <br>
-      <div class="contact-me">
-        <a href="mailto:tanerozer16@gmail.com"><button class="btn" type="button" name="Contact">
-            Get In Touch
-          </button></a>
-        <br><br>
+      </div> -->
+
+      <div class="skill-row">
+        <h2>Interests & Hobbies</h2>
+        <p>🪐 Researching New Technologies</p>
+        <p>🪐 Reading movie reviews</p>
+        <p>🪐 Artificial Intelligence</p>
       </div>
     </div>
-
-    <div class="bottom-container" id="links">
-      <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/">LinkedIn</a>
-      <a class="footer-link" href="https://www.hackerrank.com/tanerozer">HackerRank</a>
-      <a class="footer-link" href="https://medium.com/@dxtaner">Medium</a>
-      <a class="footer-link" href="https://github.com/dxtaner/">Github</a>
-      <a class="footer-link" href="https://twitter.com/@tanerozer1675/">Twitter</a>
-      <a href="index.html">
-        <p class="copyright">© Taner Özer 2022</p>
-      </a>
+    <hr />
+    <br>
+    <div class="contact-me">
+      <a href="mailto:tanerozer16@gmail.com"><button class="btn" type="button" name="Contact">
+          Get In Touch
+        </button></a>
+      <br><br>
     </div>
+  </div>
 
-    <script>
-      function toggleDarkMode() {
-        const body = document.querySelector('body');
-        body.classList.toggle('dark-mode');
-      }
-    </script>
+  <div class="bottom-container" id="links">
+    <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/">LinkedIn</a>
+    <a class="footer-link" href="https://www.hackerrank.com/tanerozer">HackerRank</a>
+    <a class="footer-link" href="https://medium.com/@dxtaner">Medium</a>
+    <a class="footer-link" href="https://github.com/dxtaner/">Github</a>
+    <a class="footer-link" href="https://twitter.com/@tanerozer1675/">Twitter</a>
+    <a href="index.html">
+      <p class="copyright">© Taner Özer 2023</p>
+    </a>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.querySelector('body');
+      body.classList.toggle('dark-mode');
+    }
+  </script>
 
 
-    <!-- Loads <model-viewer> for modern browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
 
-    <!-- Loads <model-viewer> for old browsers like IE11: -->
-    <script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
   </div>
 </body>
 
