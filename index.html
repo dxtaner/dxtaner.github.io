@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
@@ -66,10 +68,10 @@
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#links">My Links</a>
-    <a class="dark-mode-button" style="background-color:gainsboro;" onclick="toggleDarkMode()">
+    <a class="dark-mode-button" onclick="toggleDarkMode()">
       <i class="fas fa-moon"></i>
-      Dark Mode
     </a>
+    
   </nav>
 
   <div class="top-container">
@@ -168,8 +170,20 @@
   <script>
     function toggleDarkMode() {
       const body = document.querySelector('body');
+      const moonIcon = document.querySelector('.dark-mode-button i');
+
       body.classList.toggle('dark-mode');
+
+      // İkonun durumuna göre sınıfını güncelle
+      if (body.classList.contains('dark-mode')) {
+        moonIcon.classList.remove('fa-moon');
+        moonIcon.classList.add('fa-sun');
+      } else {
+        moonIcon.classList.remove('fa-sun');
+        moonIcon.classList.add('fa-moon');
+      }
     }
+
   </script>
 
 
