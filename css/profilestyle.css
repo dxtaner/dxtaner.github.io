@@ -1,0 +1,50 @@
+.myImage {
+    flex: auto;
+    font-size: 1.5rem;
+    margin: 0 1vw calc(1vw + 50px) 1vw;
+    min-width: calc(33% - 2vw);
+    position: relative;
+}
+
+.myImage:before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+}
+
+.myImage:hover .effect-1,
+.myImage:hover .effect-2 {
+    display: block;
+}
+
+.effect-1,
+.effect-2 {
+    border-radius: 100%;
+    display: none;
+    mix-blend-mode: multiply;
+    height: 70%;
+    opacity: 0.15;
+    position: absolute;
+    width: 80%;
+    z-index: 3000;
+}
+
+.effect-1 {
+    animation: rotate 1.8s linear infinite;
+    background: #bcc0c2;
+}
+
+.effect-2 {
+    animation: rotate 1s linear reverse infinite;
+    background: rgb(209, 147, 96);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
