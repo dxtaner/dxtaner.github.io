@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Taner's Personal Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/modestyle.css">
+    <link rel="stylesheet" href="css/projectsstyle.css">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+</head>
+
+<body id="background_Body">
+
+    <br>
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="#links">My Links</a>
+        <a class="dark-mode-button" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i>
+        </a>
+
+    </nav>
+
+    <div class="top-container">
+        <div class="middle-container">
+            <div class="skills" id="skills">
+                <div class="project" id="projects">
+                    <h2 class="myHeader">My Projects</h2>
+
+                    <div class="project-item">
+                        <h3>2023 Football Management System</h3>
+                        <p>Technologies: Node.js, Express.js, Mongodb-mongoose, dotenv.</p>
+                        <p>Backend code for a football management system with Coach, Footballer, Stadium, and Team
+                            models.</p>
+                        <a href="https://github.com/dxtaner/footballapp" target="_blank">Here</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>2023 Movie Store WebApi</h3>
+                        <p>Technologies: C#, AspNetCore, EntityFrameworkCore, EntityFrameworkCore-InMemory, AutoMapper,
+                            FluentValidation, JwtBearerToken</p>
+                        <p>Features: Developed to manage the database of a movie store. Written in C# programming
+                            language and uses .NET Framework 6.0. InMemory used for database management.</p>
+                        <a href="https://github.com/dxtaner/MovieStore" target="_blank">Here</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>2021 Face Image Classification</h3>
+                        <p>Technologies: Python, NumPy, OpenCV, Keras, CNN, utk-face-dataset.</p>
+                        <p>Features: Age, gender, and race classification with convolutional neural networks.</p>
+                        <a href="https://github.com/dxtaner/FaceImageClaassification" target="_blank">Here</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>2020 Face Recognition</h3>
+                        <p>Technologies: OpenCV, Haarcascade, Keras, NumPy, cvlib, Pandas, SQLite3, face-image-data.</p>
+                        <p>Features: OpenCV to perform face recognition. To build our face recognition system.</p>
+                        <a href="https://github.com/dxtaner/face_recognition_Opencv_and_Cnn_network" target="_blank">Here</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3><a href="https://github.com/dxtaner" target="_blank">Other Projects</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr />
+        <br>
+        <div class="contact-me">
+            <a href="mailto:tanerozer16@gmail.com"><button class="btn" type="button" name="Contact">
+                    Get In Touch
+                </button></a>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="bottom-container" id="links">
+        <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/" target="_blank">LinkedIn</a>
+        <a class="footer-link" href="https://www.hackerrank.com/tanerozer" target="_blank">HackerRank</a>
+        <a class="footer-link" href="https://medium.com/@dxtaner" target="_blank">Medium</a>
+        <a class="footer-link" href="https://github.com/dxtaner/" target="_blank">Github</a>
+        <a class="footer-link" href="https://twitter.com/@tanerozer1675/" target="_blank">Twitter</a>
+        <a href="index.html">
+            <p class="copyright">© Taner Özer 2023</p>
+        </a>
+    </div>
+
+    <script src="modeChange.js"></script>
+
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
+    </div>
+</body>
+
+</html>
