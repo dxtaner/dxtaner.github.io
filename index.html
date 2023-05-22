@@ -75,7 +75,7 @@
     </div>
     <hr />
     <br>
-    
+
     <div class="contact-me">
       <a href="mailto:tanerozer16@gmail.com"><button class="btn" type="button" name="Contact">
           Get In Touch
@@ -93,25 +93,9 @@
       <p class="copyright">© Taner Özer 2023</p>
     </a>
   </div>
-  <script>
-    function toggleDarkMode() {
-      const body = document.querySelector('body');
-      const moonIcon = document.querySelector('.dark-mode-button i');
+  
 
-      body.classList.toggle('dark-mode');
-
-      // İkonun durumuna göre sınıfını güncelle
-      if (body.classList.contains('dark-mode')) {
-        moonIcon.classList.remove('fa-moon');
-        moonIcon.classList.add('fa-sun');
-      } else {
-        moonIcon.classList.remove('fa-sun');
-        moonIcon.classList.add('fa-moon');
-      }
-    }
-
-  </script>
-
+  <script src="modeChange.js"></script>
 
   <!-- Loads <model-viewer> for modern browsers: -->
   <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
