@@ -20,41 +20,8 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous">
-  <style>
-    /* Gündüz modu stilleri */
-    body {
-      background-color: #fff;
-      color: wheat;
-    }
+  <link rel="stylesheet" href="css/modestyle.css">
 
-    h1 {
-      font-size: 36px;
-    }
-
-    /* Gece modu stilleri */
-    body.dark-mode {
-      background-color: #000;
-      color: rebeccapurple;
-    }
-
-    body.dark-mode h1 {
-      font-size: 36px;
-    }
-
-    .dark-mode-button {
-      background-color: #000;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 24px;
-      padding: 8px 16px;
-      cursor: pointer;
-    }
-
-    .dark-mode-button i {
-      margin-right: 8px;
-    }
-  </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
@@ -64,14 +31,14 @@
 
   <br>
   <nav>
-    <a href="#profile">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
+    <a href="index.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
     <a href="#links">My Links</a>
     <a class="dark-mode-button" onclick="toggleDarkMode()">
       <i class="fas fa-moon"></i>
     </a>
-    
+
   </nav>
 
   <div class="top-container">
@@ -98,47 +65,6 @@
           complex problems.</p>
       </div>
 
-      <!-- <div class="skills" id="skills">
-        <h2>My Skills & Interests</h2>
-        <div class="skill-row">
-          <p class="red">
-            <u><strong>I know how to:</strong></u>
-          </p>
-          <p class="red">I have a wide range of skills and interests that span across multiple programming languages,
-            technologies, and tools:</p>
-          <p class="red">⚡ I am interested in: Python, Java, C, C#, (Php, HTML, CSS, JavaScript, Bootstrap) ⚡</p>
-          <p class="red">⚡ Technologies: React, Node.js, .Net Core, Java Spring Framework, Graphql, Git, OpenCv, Numpy,
-            Pandas, Arduino, Firebase ⚡</p>
-          <p class="red">⚡ Database: SQL, PL/SQL, Sqlite, MongoDb, Postegresql, Mysql ⚡</p>
-          <p class="red">⚡ Agile & Scrum, Github, Trello ⚡</p>
-        </div>
-        <div class="project" id="projects">
-          <h2>My Projects</h2>
-          <h3>2023 Football Management System</h3>
-          <p>Technologies: Node.js, Express.js, Mongodb-mongoose, dotenv.</p>
-          <p>Backend code for a football management system with Coach, Footballer, Stadium, and Team models.</p>
-          <a href="https://github.com/dxtaner/footballapp">Here</a>
-
-          <h3>2023 Movie Store WebApi</h3>
-          <p>Technologies: C#, AspNetCore, EntityFrameworkCore, EntityFrameworkCore-InMemory, AutoMapper,
-            FluentValidation, JwtBearerToken</p>
-          <p>Features: Developed to manage the database of a movie store. Written in C# programming language and uses
-            .NET Framework 6.0. InMemory used for database management.</p>
-          <a href="https://github.com/dxtaner/MovieStore">Here</a>
-
-          <h3>2021 Face Image Classification</h3>
-          <p>Technologies: Python, NumPy, OpenCV, Keras, CNN, utk-face-dataset.</p>
-          <p>Features: Age, gender, and race classification with convolutional neural networks.</p>
-          <a href="https://github.com/dxtaner/FaceImageClaassification">Here</a>
-
-          <h3>2020 Face Recognition</h3>
-          <p>Technologies: OpenCV, Haarcascade, Keras, NumPy, cvlib, Pandas, SQLite3, face-image-data.</p>
-          <p>Features: OpenCV to perform face recognition. To build our face recognition system.</p>
-          <a href="https://github.com/dxtaner/face_recognition_Opencv_and_Cnn_network">Here</a>
-        </div>
-
-      </div> -->
-
       <div class="skill-row">
         <h2>Interests & Hobbies</h2>
         <p>🪐 Researching New Technologies</p>
@@ -155,18 +81,16 @@
       <br><br>
     </div>
   </div>
-
   <div class="bottom-container" id="links">
-    <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/">LinkedIn</a>
-    <a class="footer-link" href="https://www.hackerrank.com/tanerozer">HackerRank</a>
-    <a class="footer-link" href="https://medium.com/@dxtaner">Medium</a>
-    <a class="footer-link" href="https://github.com/dxtaner/">Github</a>
-    <a class="footer-link" href="https://twitter.com/@tanerozer1675/">Twitter</a>
+    <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/" target="_blank">LinkedIn</a>
+    <a class="footer-link" href="https://www.hackerrank.com/tanerozer" target="_blank">HackerRank</a>
+    <a class="footer-link" href="https://medium.com/@dxtaner" target="_blank">Medium</a>
+    <a class="footer-link" href="https://github.com/dxtaner/" target="_blank">Github</a>
+    <a class="footer-link" href="https://twitter.com/@tanerozer1675/" target="_blank">Twitter</a>
     <a href="index.html">
       <p class="copyright">© Taner Özer 2023</p>
     </a>
   </div>
-
   <script>
     function toggleDarkMode() {
       const body = document.querySelector('body');
