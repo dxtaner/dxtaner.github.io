@@ -1,33 +1,33 @@
- /* Gündüz modu stilleri */
- body {
-     background-color: #fff;
-     color: wheat;
- }
+/* Gündüz modu stilleri */
+body {
+    background-color: #fff;
+    color: wheat;
+}
 
- h1 {
-     font-size: 36px;
- }
+h1 {
+    font-size: 36px;
+}
 
- /* Gece modu stilleri */
- body.dark-mode {
-     background-color: #000;
-     color: rebeccapurple;
- }
+/* Gece modu stilleri */
+body.dark-mode {
+    background-color: #000;
+    color: rebeccapurple;
+}
 
- body.dark-mode h1 {
-     font-size: 36px;
- }
+body.dark-mode h1 {
+    font-size: 36px;
+}
 
- .dark-mode-button {
-     background-color: #000;
-     color: #fff;
-     border: none;
-     border-radius: 4px;
-     font-size: 24px;
-     padding: 8px 16px;
-     cursor: pointer;
- }
+.dark-mode-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
 
- .dark-mode-button i {
-     margin-right: 8px;
- }
+.dark-mode-button i {
+    margin-right: 8px;
+}

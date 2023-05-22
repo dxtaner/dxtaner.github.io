@@ -12,13 +12,14 @@ a {
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   color: white;
   text-align: center;
   font-family: "Merriweather", serif;
-  background: url(../background.gif) no-repeat fixed center;
+  background: url(../background.gif) no-repeat;
   background-size: cover;
   background-color: #f2efef;
+  margin-bottom:0px;
 }
 
 h1 {
@@ -53,7 +54,7 @@ a:hover {
   color: #590b87;
 }
 
-.first-header:hover {
+.myHeader:hover {
   color: red;
 }
 
@@ -158,74 +159,5 @@ model-viewer {
   .a {
     grid-column: 1 / 13;
     grid-row: 1 / 5;
-  }
-}
-
-/* EFFECTS */
-.product {
-  flex: auto;
-  font-size: 1.5rem;
-  margin: 0 1vw calc(1vw + 50px) 1vw;
-  min-width: calc(33% - 2vw);
-  position: relative;
-}
-
-.product:before {
-  content: "";
-  float: left;
-  padding-top: 100%;
-}
-
-.product:hover .effect-1,
-.product:hover .effect-2 {
-  display: block;
-}
-
-.effect-1,
-.effect-2 {
-  border-radius: 100%;
-  display: none;
-  mix-blend-mode: multiply;
-  height: 70%;
-  opacity: 0.15;
-  position: absolute;
-  width: 80%;
-  z-index: 3000;
-}
-
-.effect-1 {
-  animation: rotate 1.8s linear infinite;
-  background: #bcc0c2;
-}
-
-.effect-2 {
-  animation: rotate 1s linear reverse infinite;
-  background: rgb(209, 147, 96);
-}
-
-@keyframes rotate {
-  0% {
-    top: 0;
-    left: 8%;
-  }
-
-  25% {
-    top: 8%;
-    left: 0%;
-  }
-
-  50% {
-    top: 16%;
-    left: 8%;
-  }
-
-  75% {
-    top: 8%;
-    left: 16%;
-  }
-
-  100% {
-    top: 0;
-    left: 8%;
   }
 }
