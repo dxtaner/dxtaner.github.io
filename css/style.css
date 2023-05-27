@@ -129,6 +129,7 @@ a:hover {
   background-image: -o-linear-gradient(top, #edb5f4, #3498db);
   background-image: linear-gradient(to bottom, #edb5f4, #3498db);
   text-decoration: none;
+  
 }
 
 model-viewer {
