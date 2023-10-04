@@ -21,23 +21,37 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous">
   <link rel="stylesheet" href="css/modestyle.css">
+  <link rel="stylesheet" href="css/skillstyle.css">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+  <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            const navContainer = document.getElementById('navigation-container');
+            navContainer.innerHTML = data;
+        });
+  </script>
+
+<script>
+  fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+          const navContainer = document.getElementById('footer-container');
+          navContainer.innerHTML = data;
+      });
+</script>
+
+
+
 </head>
 
 <body id="background_Body">
 
   <br>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="#links">My Links</a>
-    <a class="dark-mode-button" onclick="toggleDarkMode()">
-      <i class="fas fa-moon"></i>
-    </a>
-  </nav>
+
+  <div id="navigation-container"></div> 
 
   <div class="top-container">
 
@@ -46,22 +60,19 @@
       <div class="skills" id="skills">
         <h2 class="myHeader">My Skills & Interests</h2>
         <div class="skill-row">
-          <p>
-            <u><strong>I know how to:</strong></u>
-          </p>
-          <p>I have a wide range of skills and interests that span across multiple programming languages,
-            technologies, and tools:</p>
-          <!-- <p>⚡ I am interested in: Pyhton, Java, C, C#, Flutter & Dart ⚡</p>
-          <p>⚡ Frontend: HTML, CSS, JavaScript, Bootstrap4 ⚡</p>
-          <p>⚡ Technologies: .Net WebAPI, .Net Core, React.js, Node.js, Graphql, Rest Api,
-            Salt Php, OpenCv, Numpy, Pandas, Arduino, Git  ⚡</p> -->
-          <p>⚡ Database: SQL, PL/SQL, Sqlite, MongoDb, Postegresql, Mysql ⚡</p>
-          <p>⚡ Programs I Use: Visual Studio Code, Eclipse IDE, Pycharm, Postman, Ananconda
-            Navigator, Google Colab ⚡</p>
-          <p>⚡ Agile & Scrum, Github, Trello ⚡</p>
+            <p><u><strong>I Know How To:</strong></u></p>
+            <ul>
+                <li><span class="highlight">Have a wide range of skills and interests that span across multiple programming languages, technologies, and tools:</span></li>
+                <li>⚡ Interested in: JavaScript, Python, Java, C# ⚡</li>
+                <li>⚡ Frontend: HTML, CSS, React.js, GraphQL, Bootstrap4 ⚡</li>
+                <li>⚡ Technologies: .Net WebAPI, .Net Core, Node.js, Rest API, Salt PHP, OpenCV, Git ⚡</li>
+                <li>⚡ Database: SQL, PL/SQL, SQLite, MongoDB, PostgreSQL, MySQL ⚡</li>
+                <li>⚡ Programs I Use: Visual Studio Code, Eclipse IDE, PyCharm, Postman, Anaconda Navigator, Google Colab ⚡</li>
+                <li>⚡ Agile & Scrum, Github, Trello ⚡</li>
+            </ul>
         </div>
-      </div>
-
+    </div>
+    
 
     </div>
     <hr />
@@ -75,14 +86,7 @@
   </div>
 
   <div class="bottom-container" id="links">
-    <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/" target="_blank">LinkedIn</a>
-    <a class="footer-link" href="https://www.hackerrank.com/tanerozer" target="_blank">HackerRank</a>
-    <a class="footer-link" href="https://medium.com/@dxtaner" target="_blank">Medium</a>
-    <a class="footer-link" href="https://github.com/dxtaner/" target="_blank">Github</a>
-    <a class="footer-link" href="https://twitter.com/@16tanerozer75/" target="_blank">Twitter</a>
-    <a href="index.html">
-      <p class="copyright">© Taner Özer 2023</p>
-    </a>
+    <div id="footer-container"></div> 
   </div>
 
   <script src="modeChange.js"></script>
