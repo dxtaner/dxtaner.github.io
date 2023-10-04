@@ -1,0 +1,43 @@
+.skills {
+    background-color: #230922;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.myHeader {
+    color: #080404;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skill-row {
+    margin-left: 20px;
+}
+
+.skill-row ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-row li {
+    margin-bottom: 10px;
+}
+
+
+.skill-row li::before {
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 900;
+    margin-right: 10px;
+    color: #ff9900;
+}
+
+
+.highlight {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
