@@ -1,36 +1,66 @@
+.myHeader {
+    color: #9a0add;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .project-item {
+    width: 100%;
     margin-bottom: 20px;
-    border: 1px solid red;
+    border: 1px solid #680397;
     border-radius: 8px;
     padding: 10px;
-    background-color: #9a0add;
-    opacity: 0.7;
+    background-color: #230922;
+    box-sizing: border-box;
+}
+
+.project-item:hover {
+    transform: scale(1.03);
+}
+
+.project-item>h3:hover {
+    color: #edb5f4;
+}
+
+.project-item>p:hover {
+    color: #edb5f4;
 }
 
 .project-item h3 {
-    color: wheat;
+    color: #9a0add;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .project-item p {
-    color: wheat;
+    color: #9a0add;
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-/* Bağlantı (a) stilini ayarlama */
 .project-item a {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #9facb9;
-    color: #fff;
+    background-color: #9a0add;
+    color: #edb5f4;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .project-item a:hover {
+    background-color: #680397;
     text-decoration: underline;
+    color: #edb5f4;
+}
+
+@media (min-width: 768px) {
+    .project-item {
+        width: calc(50% - 10px);
+    }
 }
