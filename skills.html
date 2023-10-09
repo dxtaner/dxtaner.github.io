@@ -3,28 +3,29 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Taner's Personal Website</title>
+  <title>Taner's Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="favicon.ico" />
+  <!-- Font Imports -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
     rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/modestyle.css">
   <link rel="stylesheet" href="css/skillstyle.css">
+  <!-- 3D Model and Prismatic Script -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+  <!-- Dynamic Navbar and Footer -->
   <script>
     fetch('navbar.html')
         .then(response => response.text())
@@ -34,70 +35,99 @@
         });
   </script>
 
-<script>
-  fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-          const navContainer = document.getElementById('footer-container');
-          navContainer.innerHTML = data;
-      });
-</script>
+  <script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            const navContainer = document.getElementById('footer-container');
+            navContainer.innerHTML = data;
+        });
+  </script>
 
-
+  
+  <script>
+    fetch('contact.html')
+        .then(response => response.text())
+        .then(data => {
+            const navContainer = document.getElementById('contact-container');
+            navContainer.innerHTML = data;
+        });
+  </script>
 
 </head>
 
 <body id="background_Body">
-
   <br>
-
   <div id="navigation-container"></div> 
 
   <div class="top-container">
-
     <div class="middle-container">
-
       <div class="skills" id="skills">
         <h2 class="myHeader">My Skills & Interests</h2>
         <div class="skill-row">
-            <p><u><strong>I Know How To:</strong></u></p>
-            <ul>
-                <li><span class="highlight">Have a wide range of skills and interests that span across multiple programming languages, technologies, and tools:</span></li>
-                <li>⚡ Interested in: JavaScript, Python, Java, C# ⚡</li>
-                <li>⚡ Frontend: HTML, CSS, React.js, GraphQL, Bootstrap4 ⚡</li>
-                <li>⚡ Technologies: .Net WebAPI, .Net Core, Node.js, Rest API, Salt PHP, OpenCV, Git ⚡</li>
-                <li>⚡ Database: SQL, PL/SQL, SQLite, MongoDB, PostgreSQL, MySQL ⚡</li>
-                <li>⚡ Programs I Use: Visual Studio Code, Eclipse IDE, PyCharm, Postman, Anaconda Navigator, Google Colab ⚡</li>
-                <li>⚡ Agile & Scrum, Github, Trello ⚡</li>
+          <p class="myInterests"><strong>My Interests</strong></p>
+            <h3>
+              <span class="highlight">
+                I'm passionate about a wide range of technologies and programming languages, and I'm always eager to learn new ones.
+              </span>
+            </h3>
+            <ul class="skills-list">
+              <li>
+                <i class="fas fa-laptop-code"></i> Programming Languages:
+                <i class="fab fa-js"></i> JavaScript,
+                <i class="fab fa-python"></i> Python,
+                <i class="fab fa-java"></i> Java,
+                <i class="fa fa-csharp"></i> C#
+              </li>
+              <li>
+                <i class="fas fa-desktop"></i> Frontend Development:
+                <i class="fab fa-html5"></i> HTML,
+                <i class="fab fa-css3"></i> CSS,
+                <i class="fab fa-react"></i> React.js,
+                <i class="fab fa-graphql"></i> GraphQL,
+                <i class="fab fa-bootstrap"></i> Bootstrap4
+              </li>
+              <li>
+                <i class="fas fa-cogs"></i> Technologies:
+                <i class="fab fa-dotnet"></i> .Net WebAPI,
+                <i class="fab fa-dotnet"></i> .Net Core,
+                <i class="fab fa-node-js"></i> Node.js,
+                Rest API,
+                <i class="fas fa-pepper-hot"></i> Salt PHP,
+                <i class="fab fa-opencv"></i> OpenCV,
+                <i class="fab fa-git"></i> Git
+              </li>
+              <li>
+                <i class="fas fa-database"></i> Databases: SQL, PL/SQL, SQLite, MongoDB, PostgreSQL, MySQL
+              </li>
+              <li>
+                <i class="fas fa-code"></i> IDEs:
+                Visual Studio Code, Eclipse IDE, PyCharm, Postman, Anaconda Navigator, Google Colab
+              </li>
+              <li>
+                <i class="fas fa-users"></i> Agile & Scrum,
+                <i class="fab fa-github"></i> Github,
+                <i class="fab fa-trello"></i> Trello
+              </li>
             </ul>
         </div>
-    </div>
-    
-
-    </div>
-    <hr />
-    <br>
-    <div class="contact-me">
-      <a href="mailto:tanerozer16@gmail.com"><button class="btn" type="button" name="Contact">
-          Get In Touch
-        </button></a>
-      <br><br>
+      </div>
     </div>
   </div>
-
-  <div class="bottom-container" id="links">
-    <div id="footer-container"></div> 
+  <hr />
+  <br>
+  <div class="contact-me">
+    <div id="contact-container"></div> 
   </div>
-
-  <script src="modeChange.js"></script>
-
-
-  <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
-
-  <!-- Loads <model-viewer> for old browsers like IE11: -->
-  <script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
-  </div>
+</div>
+<br>
+<div class="bottom-container" id="links">
+  <div id="footer-container"></div> 
+</div>
+<script src="modeChange.js"></script>
+<!-- Loads <model-viewer> for modern browsers: -->
+<script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
 </body>
-
 </html>
