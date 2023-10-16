@@ -26,20 +26,37 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+  <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            const navContainer = document.getElementById('navigation-container');
+            navContainer.innerHTML = data;
+        });
+  </script>
+  <script>
+      fetch('contact.html')
+          .then(response => response.text())
+          .then(data => {
+              const navContainer = document.getElementById('contact-container');
+              navContainer.innerHTML = data;
+          });
+  </script>
+  <script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            const navContainer = document.getElementById('footer-container');
+            navContainer.innerHTML = data;
+        });
+  </script>
 </head>
 
 <body id="background_Body">
 
   <br>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="#links">My Links</a>
-    <a class="dark-mode-button" onclick="toggleDarkMode()">
-      <i class="fas fa-moon"></i>
-    </a>
-  </nav>
+  <div id="navigation-container"></div> 
+
 
   <div class="top-container">
     <h1><em>I'm Taner</em></h1>
@@ -53,45 +70,33 @@
     <div class="middle-container">
       <div class="profile" id="profile">
         <h2 class="myHeader">
-          <strong>Who am I? What do I do?</strong>
+            <strong>Who Am I? What Do I Do?</strong>
         </h2>
-        <p>I'm a passionate computer engineer from Bursa, Turkey, with a strong interest in software and computer
-          technologies.</p>
-        <p>Currently, my focus is on back-end web development using technologies such as <em>Node.js, GraphQL,
-            React.js</em>, and other related tools.</p>
-        <p>If you have a project that requires my skills and expertise, I would be delighted to hear from you. I am
-          always eager to learn and share my knowledge with others, as I believe that collaboration is the key to
-          achieving great results.</p>
-        <p>As a naturally curious person, I enjoy the process of creating things and finding innovative solutions to
-          complex problems.</p>
+        <p>I'm a passionate computer engineer from Bursa, Turkey, with a strong interest in software and computer technologies.</p>
+        <p>Currently, I am focused on back-end web development using cutting-edge technologies such as <em>Node.js, GraphQL, React.js</em>, and other related tools.</p>
+        <p>If you have a project that requires my skills and expertise, I would be delighted to hear from you. I am always eager to learn and share my knowledge with others because I believe that collaboration is the key to achieving great results.</p>
+        <p>As a naturally curious person, I thrive on the creative process and enjoy finding innovative solutions to complex problems.</p>
       </div>
-
+    
       <div class="skill-row">
         <h2 class="myHeader">Interests & Hobbies</h2>
-        <p>🪐 Researching New Technologies</p>
-        <p>🪐 Reading movie reviews</p>
-        <p>🪐 Artificial Intelligence</p>
+        <p>🪐 Researching New Technologies 🪐</p>
+        <p>🪐 Reading Movie Reviews 🪐</p>
       </div>
     </div>
+    
     <hr />
     <br>
 
     <div class="contact-me">
-      <a href="mailto:tanerozer16@gmail.com"><button class="btn" type="button" name="Contact">
-          Get In Touch
-        </button></a>
-      <br><br>
+        <div id="contact-container"></div> 
     </div>
+
   </div>
+
+
   <div class="bottom-container" id="links">
-    <a class="footer-link" href="https://www.linkedin.com/in/tanerozer16/" target="_blank">LinkedIn</a>
-    <a class="footer-link" href="https://www.hackerrank.com/tanerozer" target="_blank">HackerRank</a>
-    <a class="footer-link" href="https://medium.com/@dxtaner" target="_blank">Medium</a>
-    <a class="footer-link" href="https://github.com/dxtaner/" target="_blank">Github</a>
-    <a class="footer-link" href="https://twitter.com/@16tanerozer75/" target="_blank">Twitter</a>
-    <a href="index.html">
-      <p class="copyright">© Taner Özer 2023</p>
-    </a>
+    <div id="footer-container"></div> 
   </div>
   
 
