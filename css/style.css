@@ -7,7 +7,7 @@ a {
   color: #ddd;
 }
 
-.switch input:checked + .slider {
+.switch input:checked+.slider {
   background-color: #222;
 }
 
@@ -19,7 +19,7 @@ body {
   background: url(../background.gif) no-repeat;
   background-size: cover;
   background-color: #f2efef;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
 
 h1 {
@@ -55,7 +55,7 @@ a:hover {
 }
 
 .myHeader:hover {
-  color: red;
+  color: rgb(127, 0, 0);
 }
 
 .skill-row {
@@ -63,9 +63,6 @@ a:hover {
   line-height: 2;
 }
 
-.red {
-  color: red;
-}
 
 .top-container {
   background-color: revert;
@@ -94,6 +91,11 @@ a:hover {
 
 .footer-link {
   font-size: 1.2rem;
+}
+
+.footer-link i {
+  font-size: 28px;
+  margin-right: 5px;
 }
 
 .jumbotron {
@@ -129,7 +131,6 @@ a:hover {
   background-image: -o-linear-gradient(top, #edb5f4, #3498db);
   background-image: linear-gradient(to bottom, #edb5f4, #3498db);
   text-decoration: none;
-  
 }
 
 model-viewer {
@@ -161,4 +162,31 @@ model-viewer {
     grid-column: 1 / 13;
     grid-row: 1 / 5;
   }
+}
+
+/* Navbar */
+nav {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+nav a {
+  color: #edb5f4;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.9;
+  font-weight: bold;
+  color: #9a0add;
+}
+
+
+nav i {
+  margin-right: 5px;
 }
