@@ -19,7 +19,7 @@
 }
 
 .project-item:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .project-item>h3:hover {
