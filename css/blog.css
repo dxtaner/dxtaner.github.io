@@ -1,0 +1,69 @@
+/* blog.css */
+
+/* Blog yazıları container'ı */
+#blog-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+/* Her blog yazısı */
+.blog-post {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #680397;
+    border-radius: 5px;
+    background-color: #230922;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.blog-post:hover {
+    transform: scale(1.01);
+}
+
+/* Blog yazısı başlıkları */
+.blog-post h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #9a0add;
+}
+
+/* Blog yazısı açıklamaları */
+.blog-post p {
+    font-size: 16px;
+    color: #edb5f4;
+}
+
+/* "Devamını Oku" bağlantıları */
+.blog-post a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #9a0add;
+}
+
+/* Sayfalama (pagination) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-number {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #edb5f4;
+    border-radius: 5px;
+    background-color: #9a0add;
+    color: #edb5f4;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.page-number:hover {
+    background-color: #edb5f4;
+    color: #9a0add;
+}
