@@ -18,7 +18,7 @@ body {
   font-family: "Merriweather", serif;
   background: url(../background.gif) no-repeat;
   background-size: cover;
-  background-color: #f2efef;
+  background-color: #222;
   margin-bottom: 0px;
 }
 
@@ -162,31 +162,4 @@ model-viewer {
     grid-column: 1 / 13;
     grid-row: 1 / 5;
   }
-}
-
-/* Navbar */
-nav {
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-nav a {
-  color: #edb5f4;
-  text-decoration: none;
-  margin: 10px;
-  font-size: 16px;
-  transition: opacity 0.3s;
-}
-
-nav a:hover {
-  opacity: 0.9;
-  font-weight: bold;
-  color: #9a0add;
-}
-
-
-nav i {
-  margin-right: 5px;
 }
