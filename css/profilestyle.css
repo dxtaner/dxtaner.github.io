@@ -47,7 +47,7 @@ h1 em {
     z-index: 3000;
 }
 
-.effect-1 {
+/* .effect-1 {
     animation: rotate 1.8s linear infinite;
     background: #bcc0c2;
 }
@@ -55,7 +55,7 @@ h1 em {
 .effect-2 {
     animation: rotate 1s linear reverse infinite;
     background: rgb(209, 147, 96);
-}
+} */
 
 @keyframes rotate {
     0% {
