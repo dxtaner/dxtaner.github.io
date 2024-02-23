@@ -33,6 +33,8 @@
 .skill-item {
     margin-bottom: 12px;
     font-size: 0.95em;
+    color: #710202;
+    font-weight: 800;
     line-height: 1.7;
 }
 
@@ -41,7 +43,8 @@
     background-color: #f0bfee;
     border-radius: 5px;
     font-weight: 700;
-    color: #333;
+    color: #710202;
+
     transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-block;
 }
@@ -49,12 +52,4 @@
 .skills-highlight:hover {
     background-color: #d67bd3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.fas,
-.fab,
-.fa {
-    margin-right: 10px;
-    color: #710202;
-    font-size: 1.1em;
 }

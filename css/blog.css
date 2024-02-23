@@ -8,6 +8,14 @@
     opacity: 0.9;
 }
 
+.myHeader {
+    color: #9a0add;
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Her blog yazısı */
 .blog-post {
     margin: 20px 0;
