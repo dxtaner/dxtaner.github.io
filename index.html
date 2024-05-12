@@ -1,111 +1,132 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8" />
-  <title>Taner's Personal Website</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/modestyle.css">
-  <link rel="stylesheet" href="css/profilestyle.css">
-
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-  <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
-  <script>
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            const navContainer = document.getElementById('navigation-container');
-            navContainer.innerHTML = data;
+  <head>
+    <meta charset="utf-8" />
+    <title>Taner's Personal Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/modestyle.css" />
+    <link rel="stylesheet" href="css/profilestyle.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navContainer = document.getElementById("navigation-container");
+          navContainer.innerHTML = data;
         });
-  </script>
-  <script>
-      fetch('contact.html')
-          .then(response => response.text())
-          .then(data => {
-              const navContainer = document.getElementById('contact-container');
-              navContainer.innerHTML = data;
-          });
-  </script>
-  <script>
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            const navContainer = document.getElementById('footer-container');
-            navContainer.innerHTML = data;
+    </script>
+    <script>
+      fetch("contact.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navContainer = document.getElementById("contact-container");
+          navContainer.innerHTML = data;
         });
-  </script>
-</head>
-
-<body id="background_Body">
-
-  <br>
-  <div id="navigation-container"></div> 
-
-
-  <div class="top-container">
-    <h1><em>I'm Taner</em></h1>
-    <div class="myImage">
-      <div class="effect-1"></div>
-      <div class="effect-2"></div>
-      <a href="#"><img class="profile-picture" src="images/taner.jpg" height="260px" width="265px" /></a>
-
-    </div>
-
-    <div class="middle-container">
-      <div class="profile" id="profile">
-        <h2 class="myHeader">
+    </script>
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navContainer = document.getElementById("footer-container");
+          navContainer.innerHTML = data;
+        });
+    </script>
+  </head>
+  <body id="background_Body">
+    <br />
+    <div id="navigation-container"></div>
+    <div class="top-container">
+      <h1><em>I'm Taner</em></h1>
+      <div class="myImage">
+        <div class="effect-1"></div>
+        <div class="effect-2"></div>
+        <a href="#"
+          ><img
+            class="profile-picture"
+            src="images/taner.jpg"
+            height="260px"
+            width="265px"
+        /></a>
+      </div>
+      <div class="middle-container">
+        <div class="profile" id="profile">
+          <h2 class="myHeader">
             <strong>Who Am I? What Do I Do?</strong>
-        </h2>
-        <p>I'm a passionate computer engineer from Bursa, Turkey, with a strong interest in software and computer technologies.</p>
-        <p>Currently, I am focused on back-end web development using cutting-edge technologies such as <em>Node.js, GraphQL, React.js</em>, and other related tools.</p>
-        <p>If you have a project that requires my skills and expertise, I would be delighted to hear from you. I am always eager to learn and share my knowledge with others because I believe that collaboration is the key to achieving great results.</p>
-        <p>As a naturally curious person, I thrive on the creative process and enjoy finding innovative solutions to complex problems.</p>
+          </h2>
+          <p>
+            I'm a passionate computer engineer from Bursa, Turkey, with a strong
+            interest in software and computer technologies.
+          </p>
+          <p>
+            Currently, I am focused on back-end web development using
+            cutting-edge technologies such as
+            <em>Node.js, GraphQL, React.js</em>, and other related tools.
+          </p>
+          <p>
+            If you have a project that requires my skills and expertise, I would
+            be delighted to hear from you. I am always eager to learn and share
+            my knowledge with others because I believe that collaboration is the
+            key to achieving great results.
+          </p>
+          <p>
+            As a naturally curious person, I thrive on the creative process and
+            enjoy finding innovative solutions to complex problems.
+          </p>
+        </div>
+        <div class="skill-row">
+          <h2 class="myHeader">Interests & Hobbies</h2>
+          <p>🪐 Researching New Technologies 🪐</p>
+          <p>🪐 Reading Movie Reviews 🪐</p>
+        </div>
       </div>
-    
-      <div class="skill-row">
-        <h2 class="myHeader">Interests & Hobbies</h2>
-        <p>🪐 Researching New Technologies 🪐</p>
-        <p>🪐 Reading Movie Reviews 🪐</p>
+      <hr />
+      <br />
+      <div class="contact-me">
+        <div id="contact-container"></div>
       </div>
     </div>
-    
-    <hr />
-    <br>
-
-    <div class="contact-me">
-        <div id="contact-container"></div> 
+    <div class="bottom-container" id="links">
+      <div id="footer-container"></div>
     </div>
-
-  </div>
-
-
-  <div class="bottom-container" id="links">
-    <div id="footer-container"></div> 
-  </div>
-  
-
-  <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
-
-  <!-- Loads <model-viewer> for old browsers like IE11: -->
-  <script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
-  </div>
-</body>
-
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
+  </body>
 </html>
