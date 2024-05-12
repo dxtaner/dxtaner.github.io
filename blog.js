@@ -1,7 +1,6 @@
 // blog.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  // JSON verilerini almak için fetch kullanımı
   fetch(
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dxtaner"
   )
@@ -9,12 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       if (data.status === "ok") {
         const items = data.items;
-        const itemsPerPage = 5; // Sayfa başına kaç yazı gösterileceğini belirleyin
-        let currentPage = 1; // Başlangıç sayfası
+        const itemsPerPage = 5;
+        let currentPage = 1;
         const totalItems = items.length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-        // Blog verilerini göstermek için HTML içeriği oluştur
         const blogContainer = document.getElementById("blog-container");
 
         const renderBlogPosts = (page) => {
