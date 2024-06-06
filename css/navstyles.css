@@ -37,7 +37,7 @@ nav {
 }
 
 /* Media query for mobile responsiveness */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .menu {
         flex-direction: column;
         text-align: center;
@@ -49,5 +49,7 @@ nav {
 }
 
 .menu>a>i {
-    margin-right: 8px;
+    margin-right: 10px;
+    margin-top: 12px;
+
 }
