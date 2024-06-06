@@ -14,14 +14,16 @@
 }
 
 .project-item {
-    flex: 0 0 calc(80% - 20px);
-    margin-bottom: 40px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 40px;
     padding: 20px;
     border-radius: 15px;
     background: linear-gradient(45deg, #230922, #680397);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 
 .project-item:hover {
     transform: translateY(-10px);
@@ -57,7 +59,7 @@
     transform: translateY(-2px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1028px) {
     .project-item {
         flex: 0 0 calc(45.33% - 20px);
     }
