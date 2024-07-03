@@ -1,79 +1,15 @@
-/* profile stilini ayarlama */
-.profile {
-    background-color: #230922;
-    /* Profil arka plan rengi */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(24, 20, 20, 0.1);
-    /* Profil kutusuna gölge efekti */
-}
-
-.myHeader {
-    color: #040303;
-    /* Başlık metin rengi */
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.profile p {
-    color: #999;
-    /* Paragraf metin rengi */
-    font-size: 18px;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-/* skill-row stilini ayarlama */
-.skill-row {
-    background-color: #230922;
-    /* Yetenekler arka plan rengi */
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Yetenekler kutusuna gölge efekti */
-}
-
-.skill-row h2 {
-    color: #040303;
-    /* Başlık metin rengi */
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.skill-row p {
-    color: #999;
-    /* Paragraf metin rengi */
-    font-size: 18px;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-/* .highlight sınıfını ayarlama */
-.highlight {
-    background-color: #ff9900;
-    /* Vurgu rengi */
-    color: #fff;
-    /* Vurgu metin rengi */
-    padding: 3px 6px;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
-/* .project-item stilini ayarlama */
 .project-item {
     margin-bottom: 20px;
-    border: 1px solid red;
     border-radius: 8px;
     padding: 10px;
     background-color: #9a0add;
-    /* Proje öğesi arka plan rengi */
+    border-bottom: solid #8a5e89 2px;
+    border-left: solid #8a5e89 1px;
     opacity: 0.7;
 }
 
 .project-item h3 {
     color: wheat;
-    /* Başlık metin rengi */
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -81,19 +17,15 @@
 
 .project-item p {
     color: wheat;
-    /* Paragraf metin rengi */
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-/* Bağlantı (a) stilini ayarlama */
 .project-item a {
     display: inline-block;
     padding: 8px 16px;
     background-color: #9facb9;
-    /* Bağlantı arka plan rengi */
     color: #fff;
-    /* Bağlantı metin rengi */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -101,5 +33,4 @@
 
 .project-item a:hover {
     text-decoration: underline;
-    /* Bağlantı hover efekti */
 }
