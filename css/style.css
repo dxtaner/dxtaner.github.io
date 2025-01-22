@@ -42,11 +42,11 @@ a {
 }
 
 a:hover {
-  color: #590b87;
+  color: #450767;
 }
 
 .myHeader:hover {
-  color: rgb(127, 0, 0);
+  color: rgb(211, 0, 0);
 }
 
 .skill-row {
@@ -156,3 +156,4 @@ model-viewer {
     grid-row: 1 / 5;
   }
 }
+
