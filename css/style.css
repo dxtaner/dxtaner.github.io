@@ -19,11 +19,21 @@ h1 {
   color: #eaea23;
   font-size: 3em;
   font-weight: lighter;
+  background: linear-gradient(90deg, #eaea23, #ff3864, #eaea23);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s linear infinite;
 }
 
 h2 {
   font-family: "Montserrat", sans-serif;
   color: #eaea23;
+  background: linear-gradient(90deg, #eaea23, #ff3864, #eaea23);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s linear infinite;
 }
 
 h3 {
@@ -39,6 +49,10 @@ a {
   font-family: "Montserrat", sans-serif;
   margin: 10px 10px;
   text-decoration: none;
+  background: linear-gradient(90deg, darkorchid, #ff3864, darkorchid);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  animation: gradientAnimation 5s linear infinite;
 }
 
 a:hover {
@@ -53,7 +67,6 @@ a:hover {
   margin: auto;
   line-height: 2;
 }
-
 
 .top-container {
   background-color: revert;
@@ -157,3 +170,15 @@ model-viewer {
   }
 }
 
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,72 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Taner's Personal Website</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/modestyle.css" />
-    <link rel="stylesheet" href="css/profilestyle.css" />
-    <link rel="icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-..."
-      crossorigin="anonymous" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-      integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o"
-      crossorigin="anonymous" />
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script
-      nomodule
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
-    <script>
-      // Fetch navigation content
-      fetch("navbar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navigation-container").innerHTML = data;
-        });
 
-      // Fetch about page content
-      fetch("aboutpage.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("aboutpage-container").innerHTML = data;
-        });
+<head>
+  <meta charset="utf-8" />
+  <title>Taner's Personal Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/modestyle.css" />
+  <link rel="stylesheet" href="css/profilestyle.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+  <script>
+    // Fetch navigation content
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("navigation-container").innerHTML = data;
+      });
 
-      // Fetch footer content
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-container").innerHTML = data;
-        });
-    </script>
-  </head>
+    // Fetch about page content
+    fetch("aboutpage.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("aboutpage-container").innerHTML = data;
+      });
 
-  <body id="background_Body">
-    <br />
-    <div id="navigation-container"></div>
+    // Fetch footer content
+    fetch('contact.html')
+      .then(response => response.text())
+      .then(data => {
+        const navContainer = document.getElementById('contact-container');
+        navContainer.innerHTML = data;
+      });
 
-    <div id="aboutpage-container"></div>
+    // Fetch footer content
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer-container").innerHTML = data;
+      });
+  </script>
+</head>
 
-    <div class="bottom-container" id="links">
-      <div id="footer-container"></div>
-    </div>
-  </body>
+<body id="background_Body">
+  <br />
+  <div id="navigation-container"></div>
+
+  <div id="aboutpage-container"></div>
+
+  <div id="contact-container"></div>
+
+  <div id="footer-container"></div>
+
+</body>
+
 </html>
