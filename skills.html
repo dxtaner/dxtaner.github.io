@@ -1,145 +1,106 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Taner's Portfolio - Skills</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/skillstyle.css" />
+    <link rel="icon" href="favicon.ico" />
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-..." crossorigin="anonymous" />
+  </head>
+  <body id="background_Body">
+    <!-- Navigation -->
+    <div id="navigation-container"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          const navContainer = document.getElementById('navigation-container');
+          navContainer.innerHTML = data;
+        });
+    </script>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Taner's Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="favicon.ico" />
-  <!-- Font Imports -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-    rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/modestyle.css">
-  <link rel="stylesheet" href="css/skillstyle.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-  <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
-
-  <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        const navContainer = document.getElementById('navigation-container');
-        navContainer.innerHTML = data;
-      });
-  </script>
-
-  <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        const navContainer = document.getElementById('footer-container');
-        navContainer.innerHTML = data;
-      });
-  </script>
-
-  <script>
-    fetch('contact.html')
-      .then(response => response.text())
-      .then(data => {
-        const navContainer = document.getElementById('contact-container');
-        navContainer.innerHTML = data;
-      });
-  </script>
-
-</head>
-
-<body id="background_Body">
-
-  <br>
-
-  <div id="navigation-container"></div>
-
-  <div class="top-container">
-    <div class="middle-container">
-      <div class="skills" id="skills">
-        <h2 class="myHeader">My Skills & Interests</h2>
-        <div class="skill-row">
-
-          <h3 class="highlight-text">
-            I'm passionate about a wide range of technologies and programming languages. I'm always eager to learn new
-            ones.
-          </h3>
-
-          <ul class="skills-list">
-            <li class="skill-item">
-              <i class="fas fa-laptop-code"></i> Programming Languages:
-              <span class="skills-highlight">JavaScript</span>
-              <span class="skills-highlight">Python</span>
-              <span class="skills-highlight">Java</span>
-              <span class="skills-highlight">C#</span>
-            </li>
-
-            <li class="skill-item">
-              <i class="fas fa-desktop"></i> Frontend Development:
-              <span class="skills-highlight">HTML</span>
-              <span class="skills-highlight">CSS</span>
-              <span class="skills-highlight">React.js</span>
-              <span class="skills-highlight">GraphQL</span>
-              <span class="skills-highlight">Bootstrap4</span>
-            </li>
-
-            <li class="skill-item">
-              <i class="fas fa-cogs"></i> Technologies:
-              <span class="skills-highlight">.Net WebAPI</span>
-              <span class="skills-highlight">.Net Core</span>
-              <span class="skills-highlight">Node.js</span>
-              <span class="skills-highlight">Rest API</span>
-              <span class="skills-highlight">OpenCV</span>
-              <span class="skills-highlight">Git</span>
-            </li>
-
-            <li class="skill-item">
-              <i class="fas fa-database"></i> Databases:
-              <span class="skills-highlight">SQL</span>
-              <span class="skills-highlight">PL/SQL</span>
-              <span class="skills-highlight">SQLite</span>
-              <span class="skills-highlight">MongoDB</span>
-              <span class="skills-highlight">PostgreSQL</span>
-              <span class="skills-highlight">MySQL</span>
-            </li>
-
-            <li class="skill-item">
-              <i class="fas fa-code"></i> IDEs:
-              <span class="skills-highlight">Visual Studio Code</span>
-              <span class="skills-highlight">Eclipse IDE</span>
-              <span class="skills-highlight">PyCharm</span>
-              <span class="skills-highlight">Postman</span>
-              <span class="skills-highlight">Anaconda Navigator</span>
-              <span class="skills-highlight">Google Colab</span>
-            </li>
-
-            <li class="skill-item">
-              <i class="fas fa-users"></i> Methodologies:
-              <span class="skills-highlight">Agile & Scrum</span>
-              <span class="skills-highlight">Github</span>
-              <span class="skills-highlight">Trello</span>
-            </li>
-          </ul>
+    <!-- Skills Content -->
+    <div class="top-container">
+      <div class="middle-container">
+        <div class="skills" id="skills">
+          <h2 class="myHeader">My Skills & Interests</h2>
+          <div class="skill-row">
+            <h3 class="highlight-text">
+              I'm passionate about a wide range of technologies and programming languages. I'm always eager to learn new ones.
+            </h3>
+            <ul class="skills-list">
+              <li class="skill-item">
+                <i class="fas fa-laptop-code"></i> Programming Languages:
+                <span class="skills-highlight">JavaScript</span>
+                <span class="skills-highlight">Python</span>
+                <span class="skills-highlight">Java</span>
+                <span class="skills-highlight">C#</span>
+              </li>
+              <li class="skill-item">
+                <i class="fas fa-desktop"></i> Frontend Development:
+                <span class="skills-highlight">HTML</span>
+                <span class="skills-highlight">CSS</span>
+                <span class="skills-highlight">React.js</span>
+                <span class="skills-highlight">GraphQL</span>
+                <span class="skills-highlight">Bootstrap4</span>
+              </li>
+              <li class="skill-item">
+                <i class="fas fa-cogs"></i> Technologies:
+                <span class="skills-highlight">.Net WebAPI</span>
+                <span class="skills-highlight">.Net Core</span>
+                <span class="skills-highlight">Node.js</span>
+                <span class="skills-highlight">Rest API</span>
+                <span class="skills-highlight">OpenCV</span>
+                <span class="skills-highlight">Git</span>
+              </li>
+              <li class="skill-item">
+                <i class="fas fa-database"></i> Databases:
+                <span class="skills-highlight">SQL</span>
+                <span class="skills-highlight">PL/SQL</span>
+                <span class="skills-highlight">SQLite</span>
+                <span class="skills-highlight">MongoDB</span>
+                <span class="skills-highlight">PostgreSQL</span>
+                <span class="skills-highlight">MySQL</span>
+              </li>
+              <li class="skill-item">
+                <i class="fas fa-code"></i> IDEs:
+                <span class="skills-highlight">Visual Studio Code</span>
+                <span class="skills-highlight">Eclipse IDE</span>
+                <span class="skills-highlight">PyCharm</span>
+                <span class="skills-highlight">Postman</span>
+                <span class="skills-highlight">Anaconda Navigator</span>
+                <span class="skills-highlight">Google Colab</span>
+              </li>
+              <li class="skill-item">
+                <i class="fas fa-users"></i> Methodologies:
+                <span class="skills-highlight">Agile & Scrum</span>
+                <span class="skills-highlight">Github</span>
+                <span class="skills-highlight">Trello</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="contact-container"></div>
-
-  </div>
-
-  <br>
-
-  <div id="footer-container"></div>
-
-  <script type="module" src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer.js"></script>
-  <script nomodule src="https://unpkg.com/@google/model-viewer@v0.3.1/dist/model-viewer-legacy.js"></script>
-</body>
-
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          const footerContainer = document.getElementById('footer-container');
+          footerContainer.innerHTML = data;
+        });
+    </script>
+  </body>
 </html>
