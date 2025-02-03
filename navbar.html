@@ -4,21 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="css/navstyles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Reset some default styles to ensure consistent rendering across browsers */
+      html {
+        font-family: 'Arial', sans-serif;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.1;
+      }
+
+      nav {
+        padding: 5px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .menu a {
+        color: #edb5f4;
+        text-decoration: none;
+        margin: 8px;
+        font-size: 18px;
+        font-family: 'Arial', sans-serif;
+        transition: color 0.3s, background-color 0.3s;
+        position: relative;
+        background: linear-gradient(90deg, #ff3864, #edb5f4, #ff3864);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientAnimation 5s linear infinite;
+      }
+
+      .menu a:hover {
+        border-bottom: 5px dotted rgb(69, 5, 5);
+        font-weight: bold;
+      }
+
+      /* Keyframes for gradient animation */
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Media query for mobile responsiveness */
+      @media (max-width: 580px) {
+        .menu {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .menu a {
+          margin: 5px 0;
+        }
+      }
+
+      .menu > a > i {
+        margin-right: 10px;
+        margin-top: 12px;
+      }
+    </style>
   </head>
   <body>
     <nav>
       <div class="menu">
-        <a href="index.html"> <i class="fas fa-user"></i>About Me </a>
-        <a href="skills.html"> <i class="fas fa-cogs"></i>Skills </a>
-        <a href="projects.html"> <i class="fas fa-code"></i>Projects </a>
+        <a href="index.html">
+          <i class="fas fa-user"></i>About Me
+        </a>
+        <a href="skills.html">
+          <i class="fas fa-cogs"></i>Skills
+        </a>
+        <a href="projects.html">
+          <i class="fas fa-code"></i>Projects
+        </a>
         <a href="myblog.html">
           <i class="fas fa-pencil-alt"></i>Last 10 Posts
         </a>
-        <a href="#links"> <i class="fas fa-link"></i>My Links </a>
+        <a href="#links">
+          <i class="fas fa-link"></i>My Links
+        </a>
       </div>
     </nav>
   </body>
