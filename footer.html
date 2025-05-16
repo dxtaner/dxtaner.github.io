@@ -1,127 +1,156 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer Örneği</title>
-  <!-- Font Awesome ikonları için CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    /* Genel stil tanımları */
-    body {
-      margin: 0;
-      font-family: "Montserrat", sans-serif;
-      color: white;
-      text-align: center;
-      background: url('background.gif') no-repeat center center fixed;
-      background-size: cover;
-      background-color: #222; /* Arka plan rengi yedek olarak eklenir */
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background: url("background.gif") no-repeat center center fixed;
+        background-size: cover;
+        background-color: #222;
+        color: white;
+        text-align: center;
+      }
 
-    .bottom-container {
-      padding: 40px 20px;
-      background-color: rgba(0, 0, 0, 0.7); /* Yarı saydam siyah arka plan */
-      border-top: 2px solid #444;
-    }
+      .bottom-container {
+        padding: 50px 20px 30px;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-top: 2px solid #444;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .footer-link {
-      color: #9a0add;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 18px;
-      font-weight: 600;
-      transition: color 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-    }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 800px;
+        margin-bottom: 20px;
+      }
 
-    .footer-link i {
-      margin-right: 8px;
-      font-size: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .footer-link:hover {
-      color: #ff3864;
-      transform: translateY(-3px);
-    }
-
-    .footer-link:hover i {
-      transform: scale(1.2);
-    }
-
-    .copyright {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #888;
-    }
-
-    .copyright a {
-      color: #888;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .copyright a:hover {
-      color: #9a0add;
-    }
-
-    /* Responsive tasarım */
-    @media (max-width: 768px) {
       .footer-link {
-        display: block;
-        margin: 10px 0;
+        color: #9a0add;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
       }
 
       .footer-link i {
-        margin-right: 5px;
+        margin-right: 8px;
+        font-size: 20px;
+        transition: transform 0.3s ease;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="bottom-container" id="links">
-    <a
-      class="footer-link"
-      href="https://www.linkedin.com/in/tanerozer16/"
-      target="_blank">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-    <a
-      class="footer-link"
-      href="https://www.hackerrank.com/tanerozer"
-      target="_blank">
-      <i class="fab fa-hackerrank"></i> HackerRank
-    </a>
-    <a
-      class="footer-link"
-      href="https://leetcode.com/tanerozer16/"
-      target="_blank">
-      <i class="fab fa-leetcode"></i> LeetCode
-    </a>
-    <a class="footer-link" href="https://medium.com/@dxtaner" target="_blank">
-      <i class="fab fa-medium"></i> Medium
-    </a>
-    <a class="footer-link" href="https://github.com/dxtaner/" target="_blank">
-      <i class="fab fa-github"></i> Github
-    </a>
 
-    <br />
+      .footer-link:hover {
+        color: #ff3864;
+        transform: scale(1.05);
+      }
 
-    <a
-      class="footer-link"
-      href="https://buymeacoffee.com/tanerozer16"
-      target="_blank">
-      <i class="fas fa-mug-hot"></i> Buy Me a Coffee
-    </a>
-    <a class="footer-link" href="https://ko-fi.com/tanerozer16" target="_blank">
-      <i class="fas fa-coffee"></i> Ko-fi
-    </a>
+      .footer-link:hover i {
+        transform: scale(1.3);
+      }
 
-    <br />
+      .copyright {
+        font-size: 14px;
+        color: #aaa;
+        margin-top: 10px;
+      }
 
-    <a href="index.html">
-      <p class="copyright">© Taner Özer 2023</p>
-    </a>
-  </div>
-</body>
+      .copyright a {
+        color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .copyright a:hover {
+        color: #9a0add;
+      }
+
+      @media (max-width: 600px) {
+        .footer-link {
+          font-size: 16px;
+        }
+
+        .footer-link i {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bottom-container" id="links">
+      <div class="footer-links">
+        <a
+          class="footer-link"
+          href="https://www.linkedin.com/in/tanerozer16/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+          class="footer-link"
+          href="https://www.hackerrank.com/tanerozer"
+          target="_blank"
+        >
+          <i class="fab fa-hackerrank"></i> HackerRank
+        </a>
+        <a
+          class="footer-link"
+          href="https://leetcode.com/tanerozer16/"
+          target="_blank"
+        >
+          <i class="fab fa-leetcode"></i> LeetCode
+        </a>
+        <a
+          class="footer-link"
+          href="https://medium.com/@dxtaner"
+          target="_blank"
+        >
+          <i class="fab fa-medium"></i> Medium
+        </a>
+        <a
+          class="footer-link"
+          href="https://github.com/dxtaner/"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i> Github
+        </a>
+        <a
+          class="footer-link"
+          href="https://buymeacoffee.com/tanerozer16"
+          target="_blank"
+        >
+          <i class="fas fa-mug-hot"></i> Buy Me a Coffee
+        </a>
+        <a
+          class="footer-link"
+          href="https://ko-fi.com/tanerozer16"
+          target="_blank"
+        >
+          <i class="fas fa-coffee"></i> Ko-fi
+        </a>
+      </div>
+      <div class="copyright">
+        <a href="index.html">© Taner Özer <span id="year"></span></a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
 </html>
