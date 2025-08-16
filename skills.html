@@ -1,120 +1,168 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Taner's Portfolio - Skills</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/skillstyle.css" />
+    <link rel="icon" href="favicon.ico" />
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Taner's Portfolio - Skills</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/skillstyle.css" />
-  <link rel="icon" href="favicon.ico" />
-  <!-- Font Imports -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-    rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-</head>
+  <body id="background_Body">
+    <!-- Navigation -->
+    <div id="navigation-container"></div>
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navContainer = document.getElementById("navigation-container");
+          navContainer.innerHTML = data;
+        });
+    </script>
 
-<body id="background_Body">
-  <!-- Navigation -->
-  <div id="navigation-container"></div>
-  <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        const navContainer = document.getElementById('navigation-container');
-        navContainer.innerHTML = data;
-      });
-  </script>
+    <!-- Skills Content -->
+    <div class="top-container">
+      <div class="middle-container">
+        <div class="skills" id="skills">
+          <h2 class="myHeader">My Skills & Experience</h2>
+          <div class="skill-row">
+            <p>
+              I have extensive experience developing both frontend and backend
+              components in
+              <strong>MERN stack projects</strong>, utilizing
+              <strong>JavaScript (ES6+)</strong>, <strong>React.js</strong>, and
+              <strong>Node.js (Express.js)</strong>. In my e-commerce projects,
+              I implemented advanced features such as
+              <strong>JWT-based authentication</strong> to secure user accounts,
+              <strong>Stripe payment integration</strong> for handling
+              transactions, and
+              <strong>real-time chat functionality with Socket.IO</strong> to
+              enhance user interaction. Additionally, I applied security
+              measures like <strong>Helmet</strong> and
+              <strong>XSS-Clean</strong> to protect applications from common
+              vulnerabilities and attacks.
+            </p>
 
-  <!-- Skills Content -->
-  <div class="top-container">
-    <div class="middle-container">
-      <div class="skills" id="skills">
-        <h2 class="myHeader">My Skills & Interests</h2>
-        <div class="skill-row">
-          <h3 class="highlight-text">
-            I'm passionate about a wide range of technologies and programming languages. I'm always eager to learn new
-            ones.
-          </h3>
-          <ul class="skills-list">
-            <li class="skill-item">
-              <i class="fas fa-laptop-code"></i> Programming Languages:
-              <span class="skills-highlight">JavaScript</span>
-              <span class="skills-highlight">Python</span>
-              <span class="skills-highlight">Java</span>
-              <span class="skills-highlight">C#</span>
-            </li>
-            <li class="skill-item">
-              <i class="fas fa-desktop"></i> Frontend Development:
-              <span class="skills-highlight">HTML</span>
-              <span class="skills-highlight">CSS</span>
-              <span class="skills-highlight">React.js</span>
-              <span class="skills-highlight">GraphQL</span>
-              <span class="skills-highlight">Bootstrap4</span>
-            </li>
-            <li class="skill-item">
-              <i class="fas fa-cogs"></i> Technologies:
-              <span class="skills-highlight">.Net WebAPI</span>
-              <span class="skills-highlight">.Net Core</span>
-              <span class="skills-highlight">Node.js</span>
-              <span class="skills-highlight">Rest API</span>
-              <span class="skills-highlight">OpenCV</span>
-              <span class="skills-highlight">Git</span>
-            </li>
-            <li class="skill-item">
-              <i class="fas fa-database"></i> Databases:
-              <span class="skills-highlight">SQL</span>
-              <span class="skills-highlight">PL/SQL</span>
-              <span class="skills-highlight">SQLite</span>
-              <span class="skills-highlight">MongoDB</span>
-              <span class="skills-highlight">PostgreSQL</span>
-              <span class="skills-highlight">MySQL</span>
-            </li>
-            <li class="skill-item">
-              <i class="fas fa-code"></i> IDEs:
-              <span class="skills-highlight">Visual Studio Code</span>
-              <span class="skills-highlight">Eclipse IDE</span>
-              <span class="skills-highlight">PyCharm</span>
-              <span class="skills-highlight">Postman</span>
-              <span class="skills-highlight">Anaconda Navigator</span>
-              <span class="skills-highlight">Google Colab</span>
-            </li>
-            <li class="skill-item">
-              <i class="fas fa-users"></i> Methodologies:
-              <span class="skills-highlight">Agile & Scrum</span>
-              <span class="skills-highlight">Github</span>
-              <span class="skills-highlight">Trello</span>
-            </li>
-          </ul>
+            <p>
+              In a <strong>tmbd films platform project</strong>, I designed and
+              implemented RESTful APIs using <strong>Node.js</strong> and
+              <strong>Express.js</strong>, performing data modeling with
+              <strong>MongoDB</strong> and ensuring optimized query performance
+              for handling large datasets. The frontend was built with
+              <strong>React.js</strong>, <strong>Redux</strong>, and
+              <strong>React Router</strong>
+              to provide a smooth, dynamic, and responsive user interface.
+              Features included real-time notifications, post creation, user
+              follow systems, and interactive comment threads.
+            </p>
+
+            <p>
+              My <strong>computer vision projects</strong> involved using
+              <strong>Python</strong>, <strong>OpenCV</strong>, and
+              <strong>MediaPipe</strong> to create applications with advanced
+              image and video processing capabilities. These projects include
+              <strong>face detection and recognition</strong>,
+              <strong>hand gesture tracking</strong> for interactive
+              applications, and a <strong>sleep detection system</strong>
+              that analyzes user behavior in real-time. These experiences
+              strengthened my understanding of algorithms, machine learning
+              concepts, and real-time data processing.
+            </p>
+
+            <p>
+              I also have backend development experience using
+              <strong>Java</strong> and <strong>C#</strong>, where I created
+              robust, scalable solutions with <strong>.NET Core</strong> and
+              <strong>.NET Web API</strong>. These projects involved database
+              integration, RESTful API design, authentication mechanisms, and
+              the development of reusable modules to increase maintainability
+              and efficiency in enterprise-level applications.
+            </p>
+
+            <p>
+              On the frontend, I focus on building user-friendly, accessible,
+              and responsive interfaces. I extensively use
+              <strong>HTML5</strong>, <strong>CSS3</strong>,
+              <strong>Bootstrap4</strong>, <strong>React.js</strong>,
+              <strong>Redux</strong>, and <strong>Context API</strong> to ensure
+              that applications are visually appealing, performant, and
+              compatible across multiple devices. I also leverage
+              <strong>React Router</strong> for seamless navigation and dynamic
+              content rendering.
+            </p>
+
+            <p>
+              My work with databases includes <strong>MongoDB</strong> for NoSQL
+              solutions and <strong>PostgreSQL</strong>
+              for relational data storage. I am skilled in data modeling,
+              writing efficient queries, and optimizing performance for both
+              read and write operations. I ensure data integrity, indexing
+              strategies, and scalability considerations are implemented in all
+              projects.
+            </p>
+
+            <p>
+              In my workflow, I consistently use <strong>Git/GitHub</strong> for
+              version control, <strong>Postman</strong> for API testing, and
+              development tools such as <strong>VS Code</strong>,
+              <strong>Nodemon</strong>, <strong>Webpack</strong>,
+              <strong>Babel</strong>, and <strong>npm/yarn</strong> for
+              streamlined development, debugging, and deployment processes.
+            </p>
+
+            <p>
+              Currently, I am expanding my expertise in
+              <strong>React Native</strong> to develop cross-platform mobile
+              applications, further deepening my knowledge in
+              <strong>React.js</strong> and <strong>Node.js</strong>. I continue
+              to explore modern application development best practices,
+              implement scalable architectures, and stay updated with emerging
+              technologies to deliver innovative and high-quality solutions.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="contact-container"></div>
-  <br>
-  <!-- Footer -->
-  <div id="footer-container"></div>
-  <script>
-
-    fetch('contact.html')
-      .then(response => response.text())
-      .then(data => {
-        const navContainer = document.getElementById('contact-container');
-        navContainer.innerHTML = data;
-      });
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        const footerContainer = document.getElementById('footer-container');
-        footerContainer.innerHTML = data;
-      });
-  </script>
-</body>
-
+    <div id="contact-container"></div>
+    <br />
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script>
+      fetch("contact.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navContainer = document.getElementById("contact-container");
+          navContainer.innerHTML = data;
+        });
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const footerContainer = document.getElementById("footer-container");
+          footerContainer.innerHTML = data;
+        });
+    </script>
+  </body>
 </html>
