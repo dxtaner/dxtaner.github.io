@@ -1,4 +1,4 @@
-.switch input:checked+.slider {
+.switch input:checked + .slider {
   background-color: #222;
 }
 
@@ -69,9 +69,14 @@ a:hover {
 }
 
 .top-container {
-  background-color: revert;
   position: relative;
-  padding: 3%;
+  width: 100%;
+  padding: 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .middle-container {
