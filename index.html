@@ -1,68 +1,126 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Taner's Personal Website</title>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Taner's Personal Website</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/modestyle.css" />
-  <link rel="stylesheet" href="css/profilestyle.css" />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-DzVUJcTF/jRWRwIe2IHD1kxpqez3uqRxrXoXNpL0+piA7twzN+RZBJY1TfrDok8o" crossorigin="anonymous" />
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-  <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
-  <script>
-    // Fetch navigation content
-    fetch("navbar.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("navigation-container").innerHTML = data;
-      });
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Taner Özer's personal portfolio website. Showcasing projects, skills, and experiences in software development, React, Node.js, Python, and more."
+    />
+    <meta
+      name="keywords"
+      content="Taner Özer, Portfolio, Software Developer, React, Node.js, Python, Projects, Web Development"
+    />
+    <meta name="author" content="Taner Özer" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    // Fetch about page content
-    fetch("aboutpage.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("aboutpage-container").innerHTML = data;
-      });
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Taner Özer - Personal Website" />
+    <meta
+      property="og:description"
+      content="Explore Taner Özer's portfolio, projects, and skills in software development."
+    />
 
-    // Fetch footer content
-    fetch('contact.html')
-      .then(response => response.text())
-      .then(data => {
-        const navContainer = document.getElementById('contact-container');
-        navContainer.innerHTML = data;
-      });
+    <meta property="og:url" content="https://dxtaner.github.io/" />
+    <meta property="og:type" content="website" />
 
-    // Fetch footer content
-    fetch("footer.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("footer-container").innerHTML = data;
-      });
-  </script>
-</head>
+    <!-- Twitter Card for Social Sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Taner Özer - Personal Website" />
+    <meta
+      name="twitter:description"
+      content="Explore Taner Özer's portfolio, projects, and skills in software development."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/your-preview-image.jpg"
+    />
 
-<body id="background_Body">
-  <br />
-  <div id="navigation-container"></div>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modestyle.css" />
+    <link rel="stylesheet" href="css/profilestyle.css" />
+    <link rel="icon" href="favicon.ico" />
 
-  <div id="aboutpage-container"></div>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
 
-  <div id="contact-container"></div>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      crossorigin="anonymous"
+    />
 
-  <div id="footer-container"></div>
+    <!-- Scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+    <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
 
-</body>
+    <script>
+      // Fetch navigation content
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navigation-container").innerHTML = data;
+        });
 
+      // Fetch about page content
+      fetch("aboutpage.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("aboutpage-container").innerHTML = data;
+        });
+
+      // Fetch contact content
+      fetch("contact.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navContainer = document.getElementById("contact-container");
+          navContainer.innerHTML = data;
+        });
+
+      // Fetch footer content
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+  </head>
+
+  <body id="background_Body">
+    <br />
+    <div id="navigation-container"></div>
+    <div id="aboutpage-container"></div>
+    <br />
+    <div id="contact-container"></div>
+    <div id="footer-container"></div>
+  </body>
 </html>
