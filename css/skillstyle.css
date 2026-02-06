@@ -1,15 +1,12 @@
 :root {
-  /* Mevcut renklerini koruyarak daha derin tonlar ekledik */
   --primary-color: #9a0add;
   --secondary-color: #6f2bb3;
   --accent-gold: #ffd700;
-  --dark-bg: #12051f; /* Çok koyu mor/siyah */
+  --dark-bg: #12051f;
 
-  /* Kart ve Metin Renkleri */
-  --skill-card-bg: rgba(111, 43, 179, 0.08); /* Şeffaf mor dokunuş */
+  --skill-card-bg: rgba(111, 43, 179, 0.08);
   --paragraph-color: #e0d5eb;
 
-  /* Gölgeler ve Efektler */
   --neon-glow: 0 0 20px rgba(154, 10, 221, 0.3);
   --glass-border: rgba(154, 10, 221, 0.2);
   --transition-time: 0.4s;
@@ -22,7 +19,6 @@
   font-weight: 900;
   margin-bottom: 40px;
   letter-spacing: -1px;
-  /* Yazıya hafif mor parlama */
   text-shadow: 0 0 15px rgba(154, 10, 221, 0.5);
 }
 
@@ -38,7 +34,6 @@
   overflow: hidden;
 }
 
-/* Hover: Kartın parlaması ve yükselmesi */
 .skill-row:hover {
   transform: translateY(-8px) scale(1.01);
   background: rgba(111, 43, 179, 0.15);
@@ -48,7 +43,6 @@
     var(--neon-glow);
 }
 
-/* Parlama Efekti (Işık süzmesi) */
 .skill-row::before {
   content: "";
   position: absolute;
@@ -72,14 +66,12 @@
   margin-bottom: 20px;
 }
 
-/* Vurgulanan Güçlü Kelimeler (Altın rengi burada parlıyor) */
 .skills strong {
   color: var(--accent-gold);
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
   font-weight: 700;
 }
 
-/* Yetenek Etiketleri (Highlights) */
 .skills-highlight {
   padding: 8px 18px;
   background: linear-gradient(
@@ -104,7 +96,6 @@
   filter: brightness(1.2);
 }
 
-/* Mobil Uyum */
 @media (max-width: 768px) {
   .myHeader {
     font-size: 32px;
