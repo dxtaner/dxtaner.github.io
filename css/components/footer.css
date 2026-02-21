@@ -1,0 +1,195 @@
+#terminal-footer {
+  background: radial-gradient(circle at top, #140025, #0b0016 70%);
+  padding: 60px 20px;
+  font-family: "Fira Code", monospace;
+  color: #eee;
+}
+
+.footer-console {
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(20, 0, 37, 0.85);
+  border: 1px solid rgba(157, 80, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(123, 44, 191, 0.4);
+  overflow: hidden;
+}
+
+.console-bar {
+  background: #240046;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+.dots span:nth-child(1) {
+  background: #ff4d6d;
+}
+.dots span:nth-child(2) {
+  background: #ffd60a;
+}
+.dots span:nth-child(3) {
+  background: #70e000;
+}
+
+.bar-title {
+  margin-left: auto;
+  color: #c77dff;
+  font-size: 13px;
+}
+
+.console-body {
+  padding: 35px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-block .cmd {
+  color: #c77dff;
+  margin-bottom: 10px;
+}
+
+.desc {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.btns a {
+  display: inline-block;
+  border: 1px solid #80ffdb;
+  padding: 6px 12px;
+  margin-right: 8px;
+  color: #80ffdb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btns a:hover {
+  background: #80ffdb;
+  color: #0b0016;
+}
+
+.link-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+}
+.link-row a {
+  color: #80ffdb;
+  text-decoration: none;
+}
+
+.spec {
+  font-size: 14px;
+  color: #bbb;
+  margin: 6px 0;
+}
+
+.footer-prompt {
+  margin-top: 40px;
+  color: #9d4edd;
+  font-size: 14px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #80ffdb;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.system-divider {
+  position: relative;
+  padding: 90px 20px;
+  background: linear-gradient(to bottom, #0b0613, #140a24, #0b0613);
+  text-align: center;
+  overflow: hidden;
+}
+
+.divider-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(140, 0, 255, 0.25),
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.divider-content {
+  position: relative;
+  z-index: 2;
+  color: #caa6ff;
+  font-family: "Courier New", monospace;
+}
+
+.divider-log {
+  font-size: 14px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.log-bracket {
+  color: #b84dff;
+}
+
+.divider-line {
+  margin: 35px auto;
+  width: 70%;
+  height: 2px;
+  background: rgba(160, 0, 255, 0.3);
+  position: relative;
+}
+
+.line-glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  background: linear-gradient(90deg, transparent, #b84dff, transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+  0% {
+    left: -120px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.divider-status {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
