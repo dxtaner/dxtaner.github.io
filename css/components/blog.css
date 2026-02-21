@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  background: #0a0014;
+  font-family: "Fira Code", monospace;
+  color: #eee;
+}
+
+.page-title {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.page-title h1 {
+  color: #c77dff;
+  letter-spacing: 4px;
+  text-shadow: 0 0 15px #7b2cbf;
+}
+
+#blog-status {
+  color: #9d4edd;
+  font-size: 13px;
+}
+
+.console {
+  width: 85%;
+  max-width: 1000px;
+  margin: auto;
+  background: #140025;
+  border-radius: 8px;
+  box-shadow: 0 0 25px #7b2cbf;
+  overflow: hidden;
+}
+
+.console-header {
+  background: #240046;
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff4d6d;
+}
+.yellow {
+  background: #ffd60a;
+}
+.green {
+  background: #70e000;
+}
+
+.console-title {
+  margin-left: auto;
+  color: #c77dff;
+}
+
+.console-body {
+  padding: 20px;
+}
+
+.blog-entry {
+  border-left: 3px solid #9d4edd;
+  padding: 15px 15px 15px 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: 0.3s;
+}
+
+.blog-entry:hover {
+  background: rgba(157, 80, 255, 0.08);
+  transform: translateX(8px);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #c77dff;
+  margin-bottom: 8px;
+}
+
+.entry-title {
+  font-size: 18px;
+  color: #fff;
+  margin: 8px 0;
+}
+
+.entry-desc {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.read-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #80ffdb;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.read-btn:hover {
+  text-decoration: underline;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #c77dff;
+}
