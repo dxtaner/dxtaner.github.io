@@ -1,0 +1,164 @@
+#contact-terminal {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #140025, #0b0016 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: "Fira Code", monospace;
+  color: #eee;
+}
+
+.terminal-window {
+  width: 1000px;
+  max-width: 95%;
+  background: rgba(20, 0, 37, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(157, 80, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 50px rgba(123, 44, 191, 0.4);
+  overflow: hidden;
+}
+
+.terminal-bar {
+  background: #240046;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+.dots span:nth-child(1) {
+  background: #ff4d6d;
+}
+.dots span:nth-child(2) {
+  background: #ffd60a;
+}
+.dots span:nth-child(3) {
+  background: #70e000;
+}
+
+.title {
+  margin-left: auto;
+  font-size: 13px;
+  color: #c77dff;
+}
+
+.terminal-content {
+  padding: 40px;
+}
+
+.intro h2 {
+  margin: 10px 0;
+  font-size: 36px;
+  color: #c77dff;
+  text-shadow: 0 0 12px #7b2cbf;
+}
+
+.sys {
+  font-size: 13px;
+  color: #9d4edd;
+}
+.sys span {
+  color: #80ffdb;
+}
+
+.sub {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.info-panel,
+.social-panel {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 25px;
+  border: 1px solid rgba(157, 80, 255, 0.2);
+  border-radius: 8px;
+}
+
+.line.ok {
+  color: #80ffdb;
+  margin-bottom: 10px;
+}
+
+.block {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.block span {
+  font-size: 12px;
+  color: #9d4edd;
+  margin-bottom: 4px;
+}
+
+.block a {
+  color: #80ffdb;
+  text-decoration: none;
+}
+.block a:hover {
+  text-decoration: underline;
+}
+
+.cmd {
+  color: #c77dff;
+  margin-bottom: 15px;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.social-grid a {
+  border: 1px solid #80ffdb;
+  padding: 10px;
+  text-align: center;
+  color: #80ffdb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-grid a:hover {
+  background: #80ffdb;
+  color: #0b0016;
+}
+
+.prompt {
+  margin-top: 40px;
+  color: #9d4edd;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #80ffdb;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
