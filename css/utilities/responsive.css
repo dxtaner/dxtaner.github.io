@@ -1,0 +1,16 @@
+/* RESPONSIVE UTILITIES */
+@media (max-width: 1024px) {
+  .hide-lg {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .hide-md {
+    display: none !important;
+  }
+}
+@media (max-width: 640px) {
+  .hide-sm {
+    display: none !important;
+  }
+}
