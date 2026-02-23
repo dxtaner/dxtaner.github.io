@@ -1,126 +1,203 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="tr">
   <head>
-    <meta charset="utf-8" />
-    <title>Taner's Personal Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taner Özer | Full Stack Developer</title>
 
-    <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Taner Özer's personal portfolio website. Showcasing projects, skills, and experiences in software development, React, Node.js, Python, and more."
-    />
-    <meta
-      name="keywords"
-      content="Taner Özer, Portfolio, Software Developer, React, Node.js, Python, Projects, Web Development"
+      content="Taner Özer - Node.js, React ve Python ile modern web çözümleri sunan Full Stack Developer."
     />
     <meta name="author" content="Taner Özer" />
-    <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="Taner Özer - Personal Website" />
-    <meta
-      property="og:description"
-      content="Explore Taner Özer's portfolio, projects, and skills in software development."
-    />
-
-    <meta property="og:url" content="https://dxtaner.github.io/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Card for Social Sharing -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Taner Özer - Personal Website" />
-    <meta
-      name="twitter:description"
-      content="Explore Taner Özer's portfolio, projects, and skills in software development."
-    />
-    <meta
-      name="twitter:image"
-      content="https://example.com/your-preview-image.jpg"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/modestyle.css" />
-    <link rel="stylesheet" href="css/profilestyle.css" />
-    <link rel="icon" href="favicon.ico" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="css/main.css" />
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-      crossorigin="anonymous"
-    />
+    <style>
+      .page-section {
+        display: none;
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+        min-height: 80vh;
+        padding-top: 100px;
+      }
+      .page-section.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #loader {
+        position: fixed;
+        inset: 0;
+        background: #0a0a0f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader">
+      <div
+        class="logo"
+        style="
+          font-size: 2rem;
+          font-family: &quot;JetBrains Mono&quot;;
+          color: #eee;
+        "
+      >
+        <span style="color: #9d50ff">></span> taner.init()
+      </div>
+    </div>
 
-    <!-- Scripts -->
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
-    ></script>
-    <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+    <div class="animated-bg"></div>
+    <div id="navbar-container"></div>
+
+    <main id="pages-container">
+      <section id="page-home" class="page-section"></section>
+      <section id="page-about" class="page-section"></section>
+      <section id="page-skills" class="page-section"></section>
+      <section id="page-projects" class="page-section"></section>
+      <section id="page-blog" class="page-section"></section>
+      <section id="page-contact" class="page-section"></section>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="js/blog.js"></script>
 
     <script>
-      // Fetch navigation content
-      fetch("navbar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navigation-container").innerHTML = data;
+      const CONFIG = {
+        sections: [
+          { id: "home", file: "hero.html", container: "page-home" },
+          { id: "about", file: "about.html", container: "page-about" },
+          { id: "skills", file: "skills.html", container: "page-skills" },
+          { id: "projects", file: "projects.html", container: "page-projects" },
+          { id: "blog", file: "blog.html", container: "page-blog" },
+          { id: "contact", file: "contact.html", container: "page-contact" },
+        ],
+      };
+
+      function setupMobileMenu() {
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        if (menuToggle && navLinks) {
+          menuToggle.onclick = function () {
+            navLinks.classList.toggle("active");
+            menuToggle.classList.toggle("open");
+          };
+
+          const links = document.querySelectorAll(".nav-page-link");
+          links.forEach((link) => {
+            link.addEventListener("click", () => {
+              navLinks.classList.remove("active");
+              menuToggle.classList.remove("open");
+            });
+          });
+        }
+      }
+
+      async function loadContent() {
+        try {
+          const [navRes, footerRes] = await Promise.all([
+            fetch("sections/navbar.html"),
+            fetch("sections/footer.html"),
+          ]);
+          document.getElementById("navbar-container").innerHTML =
+            await navRes.text();
+          document.getElementById("footer-container").innerHTML =
+            await footerRes.text();
+
+          await Promise.all(
+            CONFIG.sections.map(async (s) => {
+              const r = await fetch(`sections/${s.file}`);
+              document.getElementById(s.container).innerHTML = await r.text();
+            }),
+          );
+
+          initApp();
+        } catch (err) {
+          console.error("Yükleme Hatası:", err);
+        }
+      }
+
+      function initApp() {
+        setupMobileMenu();
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.opacity = "0";
+          setTimeout(() => loader.remove(), 500);
+        }
+
+        const hash = window.location.hash.replace("#", "") || "home";
+        navigateToPage(hash);
+        window.addEventListener("scroll", handleNavbarScroll);
+      }
+
+      function navigateToPage(pageId) {
+        const sections = document.querySelectorAll(".page-section");
+        const navLinks = document.querySelectorAll(".nav-page-link");
+
+        sections.forEach((s) => s.classList.remove("active"));
+        const target =
+          document.getElementById(`page-${pageId}`) ||
+          document.getElementById("page-home");
+        target.classList.add("active");
+
+        navLinks.forEach((l) => {
+          l.classList.remove("active");
+          if (l.getAttribute("data-page") === pageId) l.classList.add("active");
         });
 
-      // Fetch about page content
-      fetch("aboutpage.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("aboutpage-container").innerHTML = data;
-        });
+        history.pushState(null, null, `#${pageId}`);
+        window.scrollTo({ top: 0, behavior: "smooth" });
 
-      // Fetch contact content
-      fetch("contact.html")
-        .then((response) => response.text())
-        .then((data) => {
-          const navContainer = document.getElementById("contact-container");
-          navContainer.innerHTML = data;
-        });
+        if (pageId === "blog") {
+          setTimeout(() => {
+            if (typeof fetchMediumPosts === "function") {
+              fetchMediumPosts();
+            }
+          }, 200);
+        }
+      }
 
-      // Fetch footer content
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-container").innerHTML = data;
-        });
+      function handleNavbarScroll() {
+        const nav = document.getElementById("navbar");
+        if (!nav) return;
+        window.scrollY > 50
+          ? nav.classList.add("scrolled")
+          : nav.classList.remove("scrolled");
+      }
+
+      document.addEventListener("click", (e) => {
+        const link = e.target.closest(".nav-page-link");
+        if (link) {
+          e.preventDefault();
+          navigateToPage(link.getAttribute("data-page"));
+        }
+      });
+
+      window.onpopstate = () => {
+        const hash = window.location.hash.replace("#", "") || "home";
+        navigateToPage(hash);
+      };
+
+      window.onload = loadContent;
     </script>
-  </head>
-
-  <body id="background_Body">
-    <br />
-    <div id="navigation-container"></div>
-    <div id="aboutpage-container"></div>
-    <br />
-    <div id="contact-container"></div>
-    <div id="footer-container"></div>
   </body>
 </html>
