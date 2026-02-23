@@ -1,0 +1,107 @@
+.terminal-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #140a25, #090612);
+}
+
+.terminal {
+  width: 100%;
+  max-width: 950px;
+  background: #0b0714;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(157, 80, 255, 0.25);
+  border: 1px solid rgba(157, 80, 255, 0.2);
+  font-family: "JetBrains Mono", monospace;
+  color: #d6c8ff;
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  background: #120a22;
+  border-bottom: 1px solid rgba(157, 80, 255, 0.2);
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  margin-right: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.red {
+  background: #ff5f56;
+}
+.yellow {
+  background: #ffbd2e;
+}
+.green {
+  background: #27c93f;
+}
+
+.title {
+  color: #9d50ff;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.terminal-body {
+  padding: 30px;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.time {
+  color: #6b5ca5;
+  margin-right: 10px;
+}
+
+.info {
+  color: #9d50ff;
+}
+.ok {
+  color: #00ff9f;
+}
+.secure {
+  color: #ffd166;
+}
+.ai {
+  color: #00e5ff;
+}
+.ready {
+  color: #ffffff;
+}
+
+.cmd {
+  margin-left: 30px;
+  color: #bda9ff;
+  opacity: 0.9;
+}
+
+.prompt {
+  margin-top: 30px;
+  color: #9d50ff;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
