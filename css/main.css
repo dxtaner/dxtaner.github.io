@@ -1,0 +1,23 @@
+/* ============================================
+   TANER ÖZER - PORTFOLIO WEBSITE
+   Main CSS Entry Point
+   ============================================ */
+
+/* Import all CSS modules */
+@import url("./base/reset.css");
+@import url("./base/variables.css");
+@import url("./base/typography.css");
+@import url("./base/animations.css");
+
+@import url("./components/navbar.css");
+@import url("./components/hero.css");
+@import url("./components/about.css");
+@import url("./components/skills.css");
+@import url("./components/projects.css");
+@import url("./components/blog.css");
+@import url("./components/contact.css");
+@import url("./components/footer.css");
+
+@import url("./layout/layout.css");
+@import url("./utilities/utilities.css");
+@import url("./utilities/responsive.css");
