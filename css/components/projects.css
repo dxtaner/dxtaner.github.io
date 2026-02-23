@@ -1,0 +1,165 @@
+/* ===== SYSTEM CORE TERMINAL THEME ===== */
+
+#system-core {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: #0b0016;
+  font-family: "Fira Code", monospace;
+  color: #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(157, 80, 255, 0.04) 3px,
+    rgba(157, 80, 255, 0.04) 6px
+  );
+  animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(6px);
+  }
+}
+
+.terminal-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.terminal-title {
+  font-size: 42px;
+  letter-spacing: 6px;
+  color: #c77dff;
+  text-shadow: 0 0 15px #7b2cbf;
+}
+
+.sys-info {
+  font-size: 13px;
+  color: #9d4edd;
+  margin-bottom: 15px;
+}
+
+.log-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+}
+
+.log-card {
+  background: #140025;
+  border-left: 3px solid #9d4edd;
+  padding: 20px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.log-card:hover {
+  transform: translateX(10px);
+  background: #1a0033;
+  box-shadow: 0 0 20px #7b2cbf;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #c77dff;
+  margin-bottom: 10px;
+}
+
+.log-title {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.log-desc {
+  font-size: 14px;
+  color: #bdb2ff;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tech-stack {
+  margin-bottom: 15px;
+}
+
+.tech-stack code {
+  background: #240046;
+  color: #80ffdb;
+  padding: 4px 10px;
+  margin: 4px 4px 0 0;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.log-btn {
+  display: inline-block;
+  font-size: 13px;
+  color: #80ffdb;
+  text-decoration: none;
+  border: 1px solid #80ffdb;
+  padding: 6px 14px;
+  transition: 0.3s;
+}
+
+.log-btn:hover {
+  background: #80ffdb;
+  color: #0b0016;
+}
+
+.archive-box {
+  margin-top: 60px;
+  background: #140025;
+  padding: 25px;
+  border: 1px solid #9d4edd;
+  font-size: 13px;
+  color: #cdb4db;
+}
+
+.arch-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #c77dff;
+}
+
+.full-access-link {
+  color: #80ffdb;
+  text-decoration: none;
+}
+
+.arch-body p {
+  margin: 6px 0;
+}
+
+.system-footer-log {
+  margin-top: 40px;
+  text-align: center;
+  color: #9d4edd;
+  font-size: 14px;
+}
+
+.blink-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #80ffdb;
+  margin-right: 8px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
