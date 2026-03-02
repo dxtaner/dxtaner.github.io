@@ -125,7 +125,8 @@
 
 .system-divider {
   position: relative;
-  padding: 90px 20px;
+  padding: 80px 20px;
+  margin: 0px 80px 0px 80px;
   background: linear-gradient(to bottom, #0b0613, #140a24, #0b0613);
   text-align: center;
   overflow: hidden;
@@ -146,8 +147,11 @@
 .divider-content {
   position: relative;
   z-index: 2;
+  width: 100%;
   color: #caa6ff;
   font-family: "Courier New", monospace;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .divider-log {
@@ -158,14 +162,15 @@
 
 .log-bracket {
   color: #b84dff;
+  font-weight: bold;
 }
 
 .divider-line {
-  margin: 35px auto;
+  position: relative;
+  margin: 30px auto;
   width: 70%;
   height: 2px;
   background: rgba(160, 0, 255, 0.3);
-  position: relative;
 }
 
 .line-glow {
