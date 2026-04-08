@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", fetchMediumPosts);
-
 async function fetchMediumPosts() {
   const container = document.getElementById("blog-container");
   const status = document.getElementById("blog-status");
+
+  if (!container || !status) return;
 
   container.innerHTML = `<div class="loading">>> CONNECTING_TO_MEDIUM_SERVER...</div>`;
 
@@ -16,7 +16,7 @@ async function fetchMediumPosts() {
     if (data.status !== "ok") throw new Error("FEED_ERROR");
 
     status.innerText = ">> STATUS: LINK_ESTABLISHED [OK]";
-    renderPosts(data.items);
+    renderPosts(container, data.items);
   } catch (err) {
     status.innerText = ">> STATUS: CONNECTION_FAILED";
     container.innerHTML = `<div class="error">DATA_STREAM_INTERRUPTED</div>`;
@@ -24,8 +24,7 @@ async function fetchMediumPosts() {
   }
 }
 
-function renderPosts(posts) {
-  const container = document.getElementById("blog-container");
+function renderPosts(container, posts) {
   container.innerHTML = "";
 
   posts.slice(0, 10).forEach((post, i) => {
