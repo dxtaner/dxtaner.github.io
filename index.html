@@ -78,7 +78,7 @@
 
     <footer id="footer-container"></footer>
 
-    <script src="js/blog.js"></script>
+    <script src="js/blog.js" defer></script>
 
     <script>
       const CONFIG = {
@@ -92,32 +92,13 @@
         ],
       };
 
-      function setupMobileMenu() {
-        const menuToggle = document.getElementById("menuToggle");
-        const navLinks = document.getElementById("navLinks");
-
-        if (menuToggle && navLinks) {
-          menuToggle.onclick = function () {
-            navLinks.classList.toggle("active");
-            menuToggle.classList.toggle("open");
-          };
-
-          const links = document.querySelectorAll(".nav-page-link");
-          links.forEach((link) => {
-            link.addEventListener("click", () => {
-              navLinks.classList.remove("active");
-              menuToggle.classList.remove("open");
-            });
-          });
-        }
-      }
-
       async function loadContent() {
         try {
           const [navRes, footerRes] = await Promise.all([
             fetch("sections/navbar.html"),
             fetch("sections/footer.html"),
           ]);
+
           document.getElementById("navbar-container").innerHTML =
             await navRes.text();
           document.getElementById("footer-container").innerHTML =
@@ -131,6 +112,7 @@
           );
 
           initApp();
+          initFooterTyping(); // footer yüklendikten sonra typing başlat
         } catch (err) {
           console.error("Yükleme Hatası:", err);
         }
@@ -147,6 +129,25 @@
         const hash = window.location.hash.replace("#", "") || "home";
         navigateToPage(hash);
         window.addEventListener("scroll", handleNavbarScroll);
+      }
+
+      function setupMobileMenu() {
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        if (menuToggle && navLinks) {
+          menuToggle.onclick = function () {
+            navLinks.classList.toggle("active");
+            menuToggle.classList.toggle("open");
+          };
+
+          document.querySelectorAll(".nav-page-link").forEach((link) => {
+            link.addEventListener("click", () => {
+              navLinks.classList.remove("active");
+              menuToggle.classList.remove("open");
+            });
+          });
+        }
       }
 
       function navigateToPage(pageId) {
@@ -169,9 +170,7 @@
 
         if (pageId === "blog") {
           setTimeout(() => {
-            if (typeof fetchMediumPosts === "function") {
-              fetchMediumPosts();
-            }
+            if (typeof fetchMediumPosts === "function") fetchMediumPosts();
           }, 200);
         }
       }
@@ -182,6 +181,42 @@
         window.scrollY > 50
           ? nav.classList.add("scrolled")
           : nav.classList.remove("scrolled");
+      }
+      function initFooterTyping() {
+        const typedSpan = document.querySelector("#terminal-footer .typed");
+        if (!typedSpan) return;
+
+        const commands = [
+          'echo "Taner Özer — All Rights Reserved"',
+          "help",
+          "contact",
+          "github",
+          "linkedin",
+        ];
+
+        let cmdIndex = 0;
+        let charIndex = 0;
+
+        function typeCommand() {
+          if (cmdIndex >= commands.length) cmdIndex = 0;
+
+          const currentCmd = commands[cmdIndex];
+          typedSpan.textContent += currentCmd.charAt(charIndex);
+          charIndex++;
+
+          if (charIndex < currentCmd.length) {
+            setTimeout(typeCommand, 80);
+          } else {
+            setTimeout(() => {
+              typedSpan.textContent = "";
+              charIndex = 0;
+              cmdIndex++;
+              typeCommand();
+            }, 1500);
+          }
+        }
+
+        typeCommand();
       }
 
       document.addEventListener("click", (e) => {
