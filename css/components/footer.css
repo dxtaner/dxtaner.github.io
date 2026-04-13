@@ -1,3 +1,81 @@
+/* SYSTEM Divider */
+.system-divider {
+  position: relative;
+  padding: 80px 20px;
+  margin: 0px 80px;
+  background: linear-gradient(to bottom, #0b0613, #140a24, #0b0613);
+  text-align: center;
+  overflow: hidden;
+}
+
+.divider-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(140, 0, 255, 0.25),
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.divider-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  color: #caa6ff;
+  font-family: "Courier New", monospace;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.divider-log {
+  font-size: 14px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.log-bracket {
+  color: #b84dff;
+  font-weight: bold;
+}
+
+.divider-line {
+  position: relative;
+  margin: 30px auto;
+  width: 70%;
+  height: 2px;
+  background: rgba(160, 0, 255, 0.3);
+}
+
+.line-glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  background: linear-gradient(90deg, transparent, #b84dff, transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+  0% {
+    left: -120px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.divider-status {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* Terminal Footer */
 #terminal-footer {
   background: radial-gradient(circle at top, #140025, #0b0016 70%);
   padding: 60px 20px;
@@ -121,80 +199,4 @@
   .footer-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.system-divider {
-  position: relative;
-  padding: 80px 20px;
-  margin: 0px 80px 0px 80px;
-  background: linear-gradient(to bottom, #0b0613, #140a24, #0b0613);
-  text-align: center;
-  overflow: hidden;
-}
-
-.divider-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(140, 0, 255, 0.25),
-    transparent 70%
-  );
-  filter: blur(80px);
-  z-index: 0;
-}
-
-.divider-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  color: #caa6ff;
-  font-family: "Courier New", monospace;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.divider-log {
-  font-size: 14px;
-  letter-spacing: 2px;
-  opacity: 0.8;
-}
-
-.log-bracket {
-  color: #b84dff;
-  font-weight: bold;
-}
-
-.divider-line {
-  position: relative;
-  margin: 30px auto;
-  width: 70%;
-  height: 2px;
-  background: rgba(160, 0, 255, 0.3);
-}
-
-.line-glow {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 120px;
-  background: linear-gradient(90deg, transparent, #b84dff, transparent);
-  animation: scanLine 3s linear infinite;
-}
-
-@keyframes scanLine {
-  0% {
-    left: -120px;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-.divider-status {
-  font-size: 13px;
-  opacity: 0.6;
-  margin-top: 10px;
-  letter-spacing: 1px;
 }
