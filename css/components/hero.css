@@ -295,31 +295,6 @@
   box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
 }
 
-.sys-widget {
-  position: absolute;
-  background: rgba(15, 15, 20, 0.9);
-  border-left: 3px solid var(--accent);
-  padding: var(--spacing-md) var(--spacing-lg);
-  backdrop-filter: blur(15px);
-  border-radius: var(--radius-md);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  box-shadow: var(--shadow-xl);
-  animation: float 3s ease-in-out infinite;
-}
-
-.sys-widget.w-1 {
-  top: 10%;
-  right: -10%;
-  animation-delay: 0s;
-}
-
-.sys-widget.w-2 {
-  bottom: 15%;
-  right: -10%;
-  animation-delay: 1.5s;
-}
-
 .w-label {
   display: block;
   color: var(--text-muted);
@@ -378,12 +353,6 @@
   .btn-cyber {
     width: 100%;
     text-align: center;
-  }
-
-  .sys-widget {
-    position: static;
-    margin-top: var(--spacing-lg);
-    display: inline-block;
   }
 }
 
